@@ -1,0 +1,759 @@
+00
+
+Controle do documento
+
+Campo
+
+Definicao
+
+Projeto
+
+Website institucional Commet.pro
+
+Tipo
+
+Documento tecnico de alteracao, conteudo e design system
+
+Referencia de estrutura
+
+Infracorp.global - hero, horizontes, bloco core, metodo, parceiros, time e CTA final
+
+Direcao da marca
+
+Technology Growth Studio / AI-powered B2B solutions
+
+Hex principal estimado
+
+Commet Orange #FA7412, extraido visualmente da logo enviada
+
+Observacao legal
+
+Reproduzir a arquitetura e a sensacao visual, nao os assets proprietarios, textos ou identidade visual da referencia.
+
+Objetivo: especificar a adaptacao do site de referencia para uma versao Commet, mantendo a experiencia premium, cinematica e orientada a scroll, mas com linguagem, categorias, objetos 3D, conteudo e sistema visual proprios.
+
+01
+
+Resumo executivo
+
+A Commet deve ser apresentada como um estudio de tecnologia, IA e crescimento inteligente para empresas B2B. A marca nasce da intersecao entre commit, codigo e entrega continua, e comet, velocidade, trajetoria e impacto. A experiencia do site deve comunicar exatamente isso: uma empresa compacta, tecnica, criativa e fora da caixa, capaz de construir desde presenca digital e performance ate software sob medida, automacoes, plataformas, apps e pequenos SaaS.
+
+A estrutura recomendada segue a logica do site de referencia: um hero forte, uma area de categorias com objetos 3D em movimento, um bloco central de sistema/metodologia, um metodo em quatro etapas, uma area de stakeholders, apresentacao do squad e um CTA final. O conteudo abaixo ja esta escrito para uso direto na interface e acompanhado de orientacoes tecnicas de layout, animacao e componentes.
+
+Promessa central: Engineering Intelligent Growth.
+
+Posicionamento: AI-powered technology studio for B2B growth.
+
+Personalidade: precisa, ousada, futurista, tecnica e direta.
+
+Visual: dark cinematic, laranja orbital, branco tecnico, sombras profundas e objetos 3D com glow.
+
+Diferencial: nao ser apenas agencia, software house ou consultoria; ser um squad de construcao digital.
+
+02
+
+Diagnostico da referencia Infracorp.global
+
+A pagina de referencia organiza a narrativa com uma estrutura institucional simples e poderosa: hero com frase de posicionamento, secoes de horizontes/setores, um sistema proprietario, metodo em quatro fases, stakeholders, time e CTA final. Para a Commet, a alteracao deve preservar essa sequencia de leitura, mas trocar o universo de infraestrutura fisica por tecnologia, IA, performance e produto digital.
+
+Referencia
+
+Alteracao Commet
+
+Hero: Strategic by Nature / Systemic at Core
+
+Hero: Engineering Intelligent Growth / Digital by Nature, Intelligent at Core
+
+Horizons: Transportation, Energy, Space, Hypercenters
+
+Horizons: Software & Platforms, Growth & Performance, AI & Automation, Web & Digital Presence
+
+InfraCore: sistema operacional de IA para infraestrutura
+
+Commet Core: sistema de entrega que une estrategia, IA, design, codigo e performance
+
+From Vision to Visible: Define, Develop, Derisk, Deliver
+
+From Spark to Impact: Discover, Design, Build, Launch
+
+Partners as Heroes: governos, investidores, comunidades
+
+Clients as Heroes: founders, marketing teams, operations, established companies
+
+Meet the Team: diretoria institucional
+
+Meet the Squad: duo fundador, rede de especialistas e futuro squad
+
+Better Together: CTA institucional
+
+Ready to create impact?: CTA comercial para projeto, sprint ou discovery
+
+03
+
+Plataforma de marca Commet
+
+Posicionamento
+
+Commet e um estudio de tecnologia, IA e performance para empresas B2B que precisam construir, lancar e evoluir solucoes digitais com velocidade, qualidade e impacto.
+
+Narrativa do nome
+
+Commet carrega duas leituras intencionais. A primeira remete a commit: codigo, versionamento, desenvolvimento e entrega continua. A segunda remete a comet/cometa: velocidade, brilho, trajetoria e impacto. A marca deve transformar a ideia de "chegar fazendo barulho" em uma comunicacao premium: quando a Commet aparece, ela muda o cenario, cria movimento e nao passa despercebida.
+
+Manifesto curto
+
+Commet nasce da uniao entre codigo, criatividade e velocidade. Pensamos como produto, executamos como squad e usamos inteligencia artificial para acelerar tudo: sites, campanhas, automacoes, plataformas, apps e sistemas. Nao construimos apenas entregaveis. Construimos movimento digital para empresas que querem sair do comum.
+
+Tom de voz
+
+Direto e inteligente, sem parecer arrogante.
+
+Tecnico, mas compreensivel para decisores B2B.
+
+Futurista, mas pragmatica e orientada a entrega.
+
+Ousado, com frases de impacto, mas sem exagerar na promessa.
+
+Sempre conectando estrategia, IA, codigo e crescimento.
+
+04
+
+Design system visual
+
+Tokens de cor
+
+:root {  --commet-orange: #FA7412;  --commet-orange-deep: #E56615;  --commet-black: #030304;  --commet-graphite: #0C0C0E;  --commet-white: #F8F8F5;  --commet-silver: #BEC2CA;  --commet-steel: #6C727C;  --commet-glow: rgba(250, 116, 18, 0.42);}
+
+Uso visual
+
+Elemento
+
+Especificacao
+
+Background
+
+Preto profundo com gradientes radiais laranja de baixa opacidade. Usar ruido leve para textura premium.
+
+Texto principal
+
+Branco/off-white. Hierarquia grande, espaçada e com forte contraste.
+
+Acentos
+
+Laranja #FA7412 em CTAs, numeracao de secoes, linhas orbitais, hover e particulas.
+
+Cards
+
+Graphite #0C0C0E com borda cinza escura, blur e glow laranja sutil no hover.
+
+Imagens/3D
+
+Objetos dark metal, vidro, luz laranja e trails cineticos. Evitar banco de imagens generico.
+
+Logo
+
+Usar versao negativa branca sobre fundo preto. Em fundos claros, usar versao monocromatica preta.
+
+Tipografia recomendada
+
+Uso
+
+Fonte sugerida
+
+Aplicacao
+
+Display / Hero
+
+Space Grotesk, Sora ou Neue Machina
+
+Titulos grandes, linguagem futurista e tecnologia.
+
+Texto / UI
+
+Inter, Manrope ou Helvetica Now
+
+Leitura, nav, botoes, cards e textos longos.
+
+Mono / Codigo
+
+JetBrains Mono ou IBM Plex Mono
+
+Labels tecnicos, pequenos trechos de codigo e microcopy.
+
+Grid e layout
+
+Desktop: grid de 12 colunas, max-width entre 1180 e 1320 px.
+
+Espacamento vertical: secoes com 120 a 180 px no desktop; 72 a 96 px no mobile.
+
+Hero: altura minima de 100vh, objeto 3D ocupando 40 a 55% da viewport.
+
+Cards de categorias: telas full height, com scroll-snap opcional e objeto 3D fixo/lateral.
+
+Mobile: reduzir objetos 3D para imagens otimizadas ou video curto com fallback estatico.
+
+05
+
+Arquitetura da pagina
+
+Ordem
+
+Secao
+
+Objetivo
+
+CTA / Acao
+
+01
+
+Hero
+
+Explicar rapidamente a promessa e criar impacto visual.
+
+Start a project / Explore solutions
+
+02
+
+Horizons
+
+Mostrar as categorias de solucao da Commet com objetos 3D.
+
+Discover More
+
+03
+
+Commet Core
+
+Apresentar o sistema interno que conecta IA, estrategia e execucao.
+
+See how we work
+
+04
+
+Method
+
+Mostrar processo em quatro fases.
+
+Start with discovery
+
+05
+
+Heroes
+
+Mostrar para quem a Commet cria valor.
+
+Talk to Commet
+
+06
+
+Squad
+
+Reforcar duo/squad e modelo de trabalho.
+
+Meet the squad
+
+07
+
+CTA final
+
+Converter visitante em conversa/projeto.
+
+Create impact
+
+06
+
+Conteudo e especificacao por secao
+
+Hero / Above the Fold
+
+Objetivo: Transmitir em 5 segundos que a Commet une tecnologia, IA e crescimento. Fundo preto, logo no topo, objeto 3D de cometa/codigo em movimento orbital.
+
+Item
+
+Conteudo / Direcao
+
+Eyebrow
+
+AI-powered technology studio
+
+Headline
+
+Engineering Intelligent Growth.
+
+Subheadline
+
+Commet builds digital solutions for B2B companies that need to move faster: websites, campaigns, automations, platforms, apps and AI-powered systems.
+
+CTA primario
+
+Start a project
+
+CTA secundario
+
+Explore solutions
+
+Motion
+
+Cometa 3D atravessa lentamente a tela; particulas viram pequenos caracteres de codigo; scroll revela a proxima secao.
+
+Horizons / Categorias Commet
+
+Objetivo: Substituir os setores da Infracorp por quatro categorias de solucao da Commet, cada uma com figura 3D propria.
+
+Item
+
+Conteudo / Direcao
+
+Section title
+
+Explore our digital horizons
+
+Intro
+
+From performance to product, Commet designs and builds the systems that make companies move.
+
+CTA repetido
+
+Discover More
+
+Motion
+
+Cards em scroll horizontal/vertical com objeto 3D em sticky position, trail laranja e textos que entram em fade-up.
+
+The Commet Core
+
+Objetivo: Explicar que a empresa possui um modelo operacional proprio, sem parecer grande demais ou burocratica.
+
+Item
+
+Conteudo / Direcao
+
+Headline
+
+The Commet Core
+
+Subheadline
+
+A compact operating system for intelligent growth: strategy, AI, design, code, content and performance moving as one.
+
+Body
+
+Commet Core connects discovery, creative direction, product thinking, software engineering and data optimization into one execution layer. It is how a small team delivers with the speed of a squad and the precision of a product company.
+
+Motion
+
+Diagrama em camadas: Strategy, AI, Design, Code, Growth, Data. Camadas orbitam o centro com glow laranja.
+
+Method / From Spark to Impact
+
+Objetivo: Mostrar processo simples e confiavel. Deve transmitir disciplina sem engessar a imagem da marca.
+
+Item
+
+Conteudo / Direcao
+
+Headline
+
+From Spark to Impact
+
+Subheadline
+
+A four-step discipline to transform ideas into digital systems that perform.
+
+Steps
+
+Discover / Design / Build / Launch
+
+Motion
+
+Timeline vertical; cada etapa ativa uma luz orbital no objeto central.
+
+We make clients the heroes
+
+Objetivo: Trocar stakeholders institucionais por perfis de clientes B2B.
+
+Item
+
+Conteudo / Direcao
+
+Headline
+
+We make your business the signal
+
+Subheadline
+
+The work is ours. The momentum is yours.
+
+Audiences
+
+Founders, Marketing Teams, Operations, Established Companies
+
+Motion
+
+Cards com hover magnetico, linhas conectando problemas a solucoes.
+
+Meet the Squad
+
+Objetivo: Apresentar o duo atual e a evolucao para squad sem parecer pequeno demais.
+
+Item
+
+Conteudo / Direcao
+
+Headline
+
+Built as a duo. Designed to scale as a squad.
+
+Body
+
+Commet starts lean on purpose: fewer layers, faster decisions and direct involvement in every project. Around the core duo, specialists can be activated by project: design, copy, media, front-end, back-end, AI and automation.
+
+Motion
+
+Cards de membros em preto/branco com hover laranja e tags de especialidade.
+
+CTA Final / Better Together
+
+Objetivo: Fechar com convite direto e premium para contato.
+
+Item
+
+Conteudo / Direcao
+
+Headline
+
+Ready to create impact?
+
+Subheadline
+
+Every company has a next version. Commet helps build yours.
+
+CTA
+
+Talk to Commet
+
+Motion
+
+Cometa retorna ao centro, rastro vira linha de contato/CTA.
+
+07
+
+Copy final das categorias
+
+Categoria
+
+Texto para site
+
+Objeto visual
+
+Software & Platforms
+
+We design and build custom software, internal tools, dashboards, MVPs, micro-SaaS and platforms for companies that need more than off-the-shelf tools.
+
+Visual 3D: cubo modular com linhas de codigo, endpoints, bancos de dados e mini dashboards orbitando.
+
+Growth & Performance
+
+We create the digital assets that make companies visible, relevant and measurable: campaigns, creatives, landing pages, SEO, social media and conversion flows.
+
+Visual 3D: nuvem de cards criativos, graficos e pixels em movimento, como uma constelacao de performance.
+
+AI & Automation
+
+We apply artificial intelligence to automate workflows, generate content, support sales, analyze data and create agents that reduce manual work.
+
+Visual 3D: nucleo neural com agentes orbitando; cada orb representa uma automacao ou fluxo.
+
+Web & Digital Presence
+
+We build websites, landing pages and digital experiences that communicate value, load fast and convert better across devices.
+
+Visual 3D: browser em perspectiva, camadas de UI, grid SEO e cursor/linha orbital.
+
+08
+
+Objetos 3D, efeitos e interacoes
+
+Direcao para substituir aviao/missil da referencia
+
+A referencia usa objetos cineticos ligados a transporte/espaco. Na Commet, os objetos devem pertencer ao universo digital, mas manter a sensacao de velocidade e impacto: cometa, rastro, particulas, codigo, interfaces, graficos e orbitas. A figura principal deve ser um cometa abstrato que, em certos momentos, se transforma visualmente em cursor, seta, commit marker ou simbolo de deploy.
+
+Cena
+
+Descricao tecnica
+
+Observacoes
+
+Hero Comet
+
+Objeto 3D principal: corpo escuro/metalico com nucleo laranja e rastro de particulas. Pode seguir levemente o mouse no desktop.
+
+Fallback mobile: PNG/WebP animado ou video curto em loop.
+
+Development Object
+
+Cubo/terminal em perspectiva, snippets de codigo como particulas, conexoes API em linhas finas.
+
+Evitar codigo real extenso; usar microtrechos visuais.
+
+Marketing Object
+
+Cards, graficos, cursor e pixels formando uma curva de crescimento.
+
+Conectar com social media, criativos, SEO e performance.
+
+AI Object
+
+Esfera neural com nos e orbitas; pequenas luzes acendem conforme o scroll.
+
+Usar glow laranja com cuidado para nao parecer cripto/generico.
+
+Web Object
+
+Janela de browser em 3D com camadas de layout, grid e metrica de performance.
+
+Boa oportunidade para mostrar sites, landing pages e UX.
+
+CTA Object
+
+Cometa retorna e deixa um trail que vira linha/underline do CTA.
+
+Finalizar com sensacao de ciclo completo.
+
+Stack de animacao recomendada
+
+Three.js ou React Three Fiber para objetos WebGL quando houver capacidade tecnica.
+
+GSAP ScrollTrigger para sequencias de scroll e transicoes cinematicas.
+
+Lenis ou equivalente para smooth scroll, com cuidado em mobile.
+
+Lottie ou video WebM/MP4 leve como fallback quando o 3D for pesado.
+
+prefers-reduced-motion: oferecer versao sem animacoes complexas para acessibilidade.
+
+Regras de performance
+
+Evitar carregar todos os objetos 3D no primeiro load; lazy load por secao.
+
+Manter cada GLB preferencialmente abaixo de 1,5 MB comprimido; usar Draco quando fizer sentido.
+
+Usar textura pequena, materiais simples e luzes limitadas para manter FPS estavel.
+
+No mobile, priorizar imagens/videoloops e reduzir particulas.
+
+Animacoes devem reforcar conteudo. Nunca sacrificar leitura pelo efeito.
+
+09
+
+Componentes e especificacao tecnica
+
+Componente
+
+Responsabilidade
+
+Estados / comportamento
+
+Header
+
+Logo, navegacao, CTA e menu mobile.
+
+Transparente no topo; fundo blur/graphite apos scroll; CTA laranja no hover.
+
+HeroScene
+
+Render do cometa/codigo e textos principais.
+
+Mouse parallax, particles, fade-in e scroll cue.
+
+HorizonsSection
+
+Lista de categorias/solucoes.
+
+Card ativo controla objeto 3D; Discover More abre modal ou ancora.
+
+CommetCore
+
+Diagrama de camadas do sistema de entrega.
+
+Camadas orbitais, tooltips e microcopy por camada.
+
+MethodTimeline
+
+Processo Discover, Design, Build, Launch.
+
+Step ativo por scroll; cada etapa acende uma linha.
+
+AudienceCards
+
+Cards para clientes e casos de uso.
+
+Hover magnetico, borda laranja e CTA contextual.
+
+SquadSection
+
+Apresentacao do duo e rede de especialistas.
+
+Cards com tags; sem prometer uma equipe maior do que a real.
+
+FinalCTA
+
+Contato e conversao.
+
+Background com trail do cometa e CTA destacado.
+
+Modelo de dados sugerido
+
+type Horizon = {  slug: 'software' | 'growth' | 'ai' | 'web';  title: string;  kicker: string;  description: string;  services: string[];  visual: 'dev-cube' | 'growth-constellation' | 'ai-core' | 'web-layers';  ctaLabel: string;};
+
+SEO base
+
+Campo
+
+Conteudo sugerido
+
+Title
+
+Commet.pro - Technology, AI and Performance Studio
+
+Meta description
+
+Commet is an AI-powered technology studio building websites, software, automations, platforms and growth systems for B2B companies.
+
+H1
+
+Engineering Intelligent Growth.
+
+Keywords conceituais
+
+technology studio, AI automation, B2B software, performance marketing, web development, digital products
+
+Idioma recomendado
+
+Site principal em ingles com opcao futura em portugues. A marca ganha mais peso com a tagline em ingles.
+
+10
+
+Copy consolidada para homepage
+
+Hero
+
+AI-powered technology studioEngineering Intelligent Growth.Commet builds digital solutions for B2B companies that need to move faster: websites, campaigns, automations, platforms, apps and AI-powered systems.Start a project | Explore solutions
+
+Intro
+
+Built to move businesses forward.Companies do not need only digital presence. They need systems, campaigns, experiences and automations working together. Commet acts as an intelligent growth partner: we understand the problem, design the path, build with technology and optimize with data.
+
+Horizons Intro
+
+Explore our digital horizons.From performance to product, Commet designs and builds the systems that make companies move.
+
+Commet Core
+
+The Commet Core.A compact operating system for intelligent growth: strategy, AI, design, code, content and performance moving as one.
+
+Method
+
+From Spark to Impact.A four-step discipline to transform ideas into digital systems that perform: Discover, Design, Build and Launch.
+
+Heroes
+
+We make your business the signal.The work is ours. The momentum is yours. We help founders, marketing teams, operations and established companies turn digital ambition into working systems.
+
+Squad
+
+Built as a duo. Designed to scale as a squad.Commet starts lean on purpose: fewer layers, faster decisions and direct involvement in every project. Around the core duo, specialists can be activated by project.
+
+Final CTA
+
+Ready to create impact?Every company has a next version. Commet helps build yours.Talk to Commet
+
+11
+
+Checklist de implementacao
+
+Design e conteudo
+
+Validar logo final em SVG/PNG transparente e versoes negativa, positiva e icone.
+
+Confirmar se a tagline oficial sera "Engineering Intelligent Growth." em todas as telas.
+
+Escolher lingua primaria do site: recomendacao atual, ingles para interface e portugues para materiais comerciais futuros.
+
+Aprovar quatro categorias principais antes de modelar objetos 3D.
+
+Criar biblioteca de microcopy para CTAs, labels e hover states.
+
+Tecnico
+
+Definir stack: Next.js, Astro ou Webflow custom com embed WebGL, dependendo de budget e prazo.
+
+Prototipar primeiro o hero e uma categoria 3D antes de replicar para o site inteiro.
+
+Implementar fallback mobile desde o inicio, nao como correcao final.
+
+Adicionar analytics, eventos de CTA e formulario de contato integrado.
+
+Testar Lighthouse, acessibilidade, responsividade e performance em dispositivos reais.
+
+Assets necessarios
+
+Logo vetorial final em SVG.
+
+Icone/simbolo isolado do cometa.
+
+Paleta oficial aprovada a partir do #FA7412.
+
+Modelos 3D ou motion assets para cometa, desenvolvimento, marketing, IA e web.
+
+Fotos ou avatares do duo/squad, se a secao de time for mantida.
+
+Formulario/WhatsApp/Email de contato oficial para CTA.
+
+12
+
+Criterios de aceite
+
+Area
+
+Criterio
+
+Identidade
+
+O site deve ser reconhecivel como Commet, sem dependencia visual dos assets da referencia.
+
+Narrativa
+
+Em ate 10 segundos, o visitante deve entender que a Commet une tecnologia, IA e crescimento B2B.
+
+Efeitos
+
+Objetos 3D devem reforcar as categorias e nao parecer decoracao aleatoria.
+
+Performance
+
+Experiencia fluida em desktop e mobile, com fallback para animacoes pesadas.
+
+Conversao
+
+CTAs claros para iniciar projeto, falar com o time ou explorar solucoes.
+
+Escalabilidade
+
+Estrutura deve permitir adicionar cases, blog, paginas de servico e idioma PT/EN no futuro.
+
+13
+
+Anexo A - logo e aplicacoes visuais
+
+A imagem abaixo foi usada como referencia visual da marca. Para producao final, o ideal e substituir por arquivos vetoriais oficiais.
+
+Notas finais
+
+Nao usar simbolo de marca registrada se a Commet ainda nao tiver registro formal.
+
+Evitar linguagem muito generica de agencia, como "solucoes personalizadas" sem contexto.
+
+Usar a ideia de impacto com elegancia: "muda o cenario" e "cria movimento" em vez de "faz estrago".
+
+Construir a primeira versao com foco em conversao e portabilidade, deixando blog/cases para fase 2.
