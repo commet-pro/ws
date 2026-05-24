@@ -31212,7 +31212,7 @@ class FlowFieldParticles {
   }
 }
 const vertexShader = "// Billboarded atmospheric sprite shader - Vertex\nvarying vec2 vUv;\nuniform float atmScale;\n\nvoid main() {\n    vUv = uv;\n\n    #ifdef USE_INSTANCING\n        // Get the center position from instance matrix and model-view\n        vec4 mvCenter = modelViewMatrix * instanceMatrix * vec4(0.0, 0.0, 0.0, 1.0);\n\n        float scaleX = 2.0 * atmScale;\n        float scaleY = 2.0 * atmScale;\n\n        // Billboard: offset in view space with proper scale\n        gl_Position = projectionMatrix * (mvCenter + vec4(position.x * scaleX, position.y * scaleY, 0.0, 0.0));\n    #else\n        // Get the center position from model-view\n        vec4 mvCenter = modelViewMatrix * vec4(0.0, 0.0, 0.0, 1.0);\n\n        // Extract scale from model-view matrix\n        vec4 mvX = modelViewMatrix * vec4(1.0, 0.0, 0.0, 0.0);\n        vec4 mvY = modelViewMatrix * vec4(0.0, 1.0, 0.0, 0.0);\n        float scaleX = length(mvX);\n        float scaleY = length(mvY);\n\n        // Billboard: offset in view space with proper scale\n        gl_Position = projectionMatrix * (mvCenter + vec4(position.x * scaleX, position.y * scaleY, 0.0, 0.0));\n    #endif\n}";
-const fragmentShader = "// reference from https://youtu.be/vM8M4QloVL0?si=CKD5ELVrRm3GjDnN\n/*varying vec3 vNormal;\nvarying vec3 eyeVector;\nuniform float atmOpacity;\nuniform float atmPowFactor;\nuniform float atmMultiplier;\nuniform float atmClamp;\n\nvoid main() {\n    // Starting from the atmosphere edge, dotP would increase from 0 to 1\n    float dotP = dot( vNormal, eyeVector );\n    // This factor is to create the effect of a realistic thickening of the atmosphere coloring\n    float factor = pow(dotP, 2.0 + atmClamp) ;\n    // Adding in a bit of dotP to the color to make it whiter while thickening\n    vec3 atmColor = vec3(0.22, 0.91, 0.95);\n    vec3 atmFar = vec3(0.0, 0.37, 1.0);\n    vec3 black = vec3(0.063,0.106,0.137);\n    \n    gl_FragColor =\n    \n    vec4( \n        mix(black,mix(atmFar,atmColor,smoothstep(0.0,0.4,factor)),smoothstep(0.0,0.4,factor))\n        ,\n    smoothstep(0.0,0.4,factor) + 1.0 - min(1.0,atmClamp));\n   \n    \n}\n*/\n\nvarying vec3 vNormal;\nvarying vec3 eyeVector;\nuniform float atmOpacity;\nuniform float atmPowFactor;\nuniform float atmMultiplier;\nuniform float atmClamp;\n// Billboarded atmospheric sprite shader - Fragment\nvarying vec2 vUv;\n\nvoid main() {\n    // Center UV coordinates from [0,1] to [-1,1]\n    vec2 center = vUv * 2.0 - 1.0;\n\n    // Calculate distance from center (SDF for circle)\n    float dist = 1.0 - length(center);\n\n    // Anti-aliased circle edge\n    float pixelWidth = fwidth(dist);\n    float circleMask = 1.0 - smoothstep(1.0 - pixelWidth * 2.0, 1.0, dist);\n\n    // Radial gradient for atmosphere effect\n    float radialGradient = 1.0 - dist;\n\n    // Create atmospheric layers\n    float innerGlow = smoothstep(0.0, 0.6, radialGradient);\n    float outerGlow = smoothstep(0.0, 1.0, radialGradient);\n\n    \n    float factor = pow(dist, 1.1 + atmClamp) ;\n\n    vec3 atmColor = vec3(0.22, 0.91, 0.95);\n    vec3 atmFar = vec3(0.0, 0.37, 1.0);\n    vec3 black = vec3(0.063,0.106,0.137);\n    \n    gl_FragColor =\n    \n    vec4( \n        mix(black,mix(atmFar,atmColor,smoothstep(0.0,0.4,factor)),smoothstep(0.0,0.4,factor))\n        ,\n    smoothstep(0.0,0.4,factor) + 1.0 - min(1.0,atmClamp));\n\n\n    if (length(center) > 0.97){\n        gl_FragColor.a = 0.; \n    }\n}";
+const fragmentShader = "// reference from https://youtu.be/vM8M4QloVL0?si=CKD5ELVrRm3GjDnN\n/*varying vec3 vNormal;\nvarying vec3 eyeVector;\nuniform float atmOpacity;\nuniform float atmPowFactor;\nuniform float atmMultiplier;\nuniform float atmClamp;\n\nvoid main() {\n    // Starting from the atmosphere edge, dotP would increase from 0 to 1\n    float dotP = dot( vNormal, eyeVector );\n    // This factor is to create the effect of a realistic thickening of the atmosphere coloring\n    float factor = pow(dotP, 2.0 + atmClamp) ;\n    // Adding in a bit of dotP to the color to make it whiter while thickening\n    vec3 atmColor = vec3(0.98, 0.455, 0.07);\n    vec3 atmFar = vec3(0.898, 0.4, 0.082);\n    vec3 black = vec3(0.11, 0.11, 0.118);\n    \n    gl_FragColor =\n    \n    vec4( \n        mix(black,mix(atmFar,atmColor,smoothstep(0.0,0.4,factor)),smoothstep(0.0,0.4,factor))\n        ,\n    smoothstep(0.0,0.4,factor) + 1.0 - min(1.0,atmClamp));\n   \n    \n}\n*/\n\nvarying vec3 vNormal;\nvarying vec3 eyeVector;\nuniform float atmOpacity;\nuniform float atmPowFactor;\nuniform float atmMultiplier;\nuniform float atmClamp;\n// Billboarded atmospheric sprite shader - Fragment\nvarying vec2 vUv;\n\nvoid main() {\n    // Center UV coordinates from [0,1] to [-1,1]\n    vec2 center = vUv * 2.0 - 1.0;\n\n    // Calculate distance from center (SDF for circle)\n    float dist = 1.0 - length(center);\n\n    // Anti-aliased circle edge\n    float pixelWidth = fwidth(dist);\n    float circleMask = 1.0 - smoothstep(1.0 - pixelWidth * 2.0, 1.0, dist);\n\n    // Radial gradient for atmosphere effect\n    float radialGradient = 1.0 - dist;\n\n    // Create atmospheric layers\n    float innerGlow = smoothstep(0.0, 0.6, radialGradient);\n    float outerGlow = smoothstep(0.0, 1.0, radialGradient);\n\n    \n    float factor = pow(dist, 1.1 + atmClamp) ;\n\n    vec3 atmColor = vec3(0.98, 0.455, 0.07);\n    vec3 atmFar = vec3(0.898, 0.4, 0.082);\n    vec3 black = vec3(0.11, 0.11, 0.118);\n    \n    gl_FragColor =\n    \n    vec4( \n        mix(black,mix(atmFar,atmColor,smoothstep(0.0,0.4,factor)),smoothstep(0.0,0.4,factor))\n        ,\n    smoothstep(0.0,0.4,factor) + 1.0 - min(1.0,atmClamp));\n\n\n    if (length(center) > 0.97){\n        gl_FragColor.a = 0.; \n    }\n}";
 let rv = new Vector3(0, 0, 0);
 let rq = new Quaternion();
 let rm = new Matrix4();
@@ -31306,7 +31306,7 @@ class Earth extends Object3D {
                 // adding small amount of atmospheric coloring to make it more realistic
                 // fine tune the first constant for stronger or weaker effect
                 float intensity = 1.2 - dot( normalize(normal), vec3( 0.0, 0.0, 1.0 ) );
-                vec3 atmosphere = vec3( 0.3, 0.6, 1.0 ) * pow(intensity, 10.0) * 0.6;
+                vec3 atmosphere = vec3(0.98, 0.455, 0.07) * pow(intensity, 10.0) * 0.6;
                 diffuseColor.rgb += atmosphere;
                 
 
@@ -31353,7 +31353,7 @@ class Earth extends Object3D {
       shader.fragmentShader = shader.fragmentShader.replace("#include <dithering_fragment>", `
                 #include <dithering_fragment>
 
-                gl_FragColor.rgb = mix(gl_FragColor.rgb,vec3(0.063,0.106,0.137),earthOpacity);
+                gl_FragColor.rgb = mix(gl_FragColor.rgb,vec3(0.11, 0.11, 0.118),earthOpacity);
                 `);
       earthMat.userData.shader = shader;
     };
@@ -31680,7 +31680,7 @@ const module = {
         timeAppearing: times[key],
         key,
         childMeshVisible: false,
-        colors: ["#39C6F3", "#ffffff"],
+        colors: ["#FA7412", "#ffffff"],
         size: 2.2,
         disturbIntensity: 0.5,
         repulsionForce: 2,

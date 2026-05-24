@@ -23426,7 +23426,7 @@ function _sfc_render$7(_ctx, _cache) {
           rx: "0",
           ry: "0",
           transform: "translate(0-.000008)",
-          fill: "#030304",
+          fill: "#1C1C1E",
           "stroke-width": "0"
         }),
         createBaseVNode("g", { mask: "url(#eExyZTGsjq55)" }, [
@@ -23918,9 +23918,9 @@ function _sfc_render$7(_ctx, _cache) {
             ry: "28",
             transform: "matrix(1 0 0 1-8.375042-5.249997)",
             opacity: "0.2",
-            fill: "#0C0C0E",
+            fill: "#272727",
             "stroke-width": "0",
-            style: { "display": "inline!important", "height": "61.25px!important", "fill": "rgb(17, 35, 70)!important", "fill-opacity": "1!important", "filter": "none!important", "mask": "none!important", "opacity": "0.2!important", "stroke": "none!important", "stroke-opacity": "1!important", "stroke-width": "0px!important", "transform": "matrix(1, 0, 0, 1, -8.375042, -5.249997)!important", "transform-origin": "0px 0px!important", "visibility": "visible!important", "width": "175px!important", "x": "0px!important", "y": "0px!important" }
+            style: { "display": "inline!important", "height": "61.25px!important", "fill": "rgb(250, 116, 18)!important", "fill-opacity": "1!important", "filter": "none!important", "mask": "none!important", "opacity": "0.2!important", "stroke": "none!important", "stroke-opacity": "1!important", "stroke-width": "0px!important", "transform": "matrix(1, 0, 0, 1, -8.375042, -5.249997)!important", "transform-origin": "0px 0px!important", "visibility": "visible!important", "width": "175px!important", "x": "0px!important", "y": "0px!important" }
           }),
           createBaseVNode("path", {
             id: "eExyZTGsjq578",

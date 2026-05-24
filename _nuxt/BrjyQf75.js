@@ -8533,7 +8533,7 @@ void main()	{
 	float dot = 1.0 - smoothstep(dotRadius - 0.02, dotRadius, dist);
 
 	// White dots with 0.5 opacity, only visible where trail exists
-	vec3 dotColor = vec3(0.118,0.616,0.831);
+	vec3 dotColor = vec3(0.98,0.455,0.07);
 	float dotOpacity = dot * trailIntensity * 0.75;
 
 	// Blend dots over the original color
@@ -8655,7 +8655,7 @@ const module$2 = {
       darkness: 0.6
     });
     const auroraShader = AuroraShader(opts, {
-      colorStops: ["#39C6F3", "#ffe3d1", "#ffffff"]
+      colorStops: ["#FA7412", "#ffe3d1", "#ffffff"]
     });
     auroraShader.uniforms.uResolution.value = [resolution.x, resolution.y];
     composer.addPass(new ShaderPass(auroraShader, "tDiffuse"));
@@ -8857,7 +8857,7 @@ const module$1 = {
         timeAppearing: times[key],
         key,
         childMeshVisible: false,
-        colors: ["#39C6F3", "#ffffff"],
+        colors: ["#FA7412", "#ffffff"],
         size: 2.2,
         disturbIntensity: 0.5,
         repulsionForce: 2,
@@ -8990,7 +8990,7 @@ const module = {
       darkness: 0.6
     });
     const auroraShader = AuroraShader(opts, {
-      colorStops: ["#39C6F3", "#ffe3d1", "#ffffff"]
+      colorStops: ["#FA7412", "#ffe3d1", "#ffffff"]
     });
     auroraShader.uniforms.uResolution.value = [resolution.x, resolution.y];
     composer.addPass(new ShaderPass(auroraShader, "tDiffuse"));
