@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start Your Project | Commet.pro - Technology, AI and Performance Studio</title>
+  <meta name="description" content="Start your project with Commet.pro. Tell us about your vision and let's engineer intelligent growth together.">
+  <link rel="canonical" href="https://commet.pro/start/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Start Your Project | Commet.pro">
+  <meta property="og:description" content="Initiate your project onboarding and let us build your software, AI agents, or performance pipelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://commet.pro/start/">
+  <meta property="og:image" content="https://commet.pro/rel.jpg">
+  <meta property="og:site_name" content="Commet.pro">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <style>
+    :root {
+      --commet-orange: #FA7412;
+      --commet-orange-deep: #E56615;
+      --commet-black: #030304;
+      --commet-graphite: #0C0C0E;
+      --commet-white: #F8F8F5;
+      --commet-silver: #BEC2CA;
+      --commet-steel: #6C727C;
+      --commet-glow: rgba(250, 116, 18, 0.42);
+      --bg: #1C1C1E;
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: Eina01;
+      font-style: normal;
+      font-weight: 300;
+      src: url(/fonts/Eina01-Light.woff2) format("woff2");
+    }
+    @font-face {
+      font-display: swap;
+      font-family: Eina01;
+      font-style: normal;
+      font-weight: 400;
+      src: url(/fonts/Eina01-Regular.woff2) format("woff2");
+    }
+    @font-face {
+      font-display: swap;
+      font-family: Eina02;
+      font-style: normal;
+      font-weight: 700;
+      src: url(/fonts/Eina02-Bold.woff2) format("woff2");
+    }
+
+    body, html {
+      background-color: var(--bg);
+      color: var(--commet-white);
+      font-family: Eina01, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Cinematic animated background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(250, 116, 18, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(250, 116, 18, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Elegant grid lines */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 80px 80px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      box-sizing: border-box;
+      background: rgba(28, 28, 30, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 10;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        padding: 0 24px;
+        height: 80px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 12px;
+    }
+
+    .logo-text {
+      font-family: Eina02;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .btn-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background: var(--commet-orange);
+      border-color: var(--commet-orange);
+      box-shadow: 0 0 15px var(--commet-glow);
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 140px auto 60px;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      main {
+        margin-top: 100px;
+        padding: 0 24px;
+      }
+    }
+
+    h1 {
+      font-family: Eina02;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      text-align: center;
+      background: linear-gradient(135deg, #fff 0%, var(--commet-silver) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 34px;
+      }
+    }
+
+    .subtitle {
+      color: var(--commet-steel);
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    /* Language Switcher Tab */
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 4px;
+      border-radius: 100px;
+      width: fit-content;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--commet-steel);
+      padding: 8px 18px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .lang-btn.active {
+      background: var(--commet-orange);
+      color: #fff;
+      box-shadow: 0 0 10px var(--commet-glow);
+    }
+
+    /* Onboarding Card container */
+    .onboarding-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 28px;
+      padding: 48px;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: relative;
+    }
+
+    @media screen and (max-width: 600px) {
+      .onboarding-card {
+        padding: 32px 24px;
+      }
+    }
+
+    /* Wizard steps progress bar */
+    .progress-container {
+      margin-bottom: 40px;
+    }
+
+    .progress-bar-bg {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 25%; /* Controlled by active step */
+      background: linear-gradient(90deg, var(--commet-orange), #FF8E3C);
+      box-shadow: 0 0 12px var(--commet-glow);
+      border-radius: 10px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .step-indicators {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+    }
+
+    .step-dot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--commet-steel);
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .step-dot.active {
+      color: var(--commet-orange);
+    }
+
+    .step-dot.completed {
+      color: #fff;
+    }
+
+    .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .step-dot.active .step-number {
+      background: var(--commet-orange);
+      border-color: var(--commet-orange);
+      box-shadow: 0 0 10px var(--commet-glow);
+      color: #fff;
+    }
+
+    .step-dot.completed .step-number {
+      background: rgba(250, 116, 18, 0.2);
+      border-color: var(--commet-orange);
+      color: var(--commet-orange);
+    }
+
+    /* Onboarding wizard views */
+    .wizard-step {
+      display: none;
+    }
+
+    .wizard-step.active {
+      display: block;
+      animation: stepFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes stepFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-title {
+      font-family: Eina02;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .step-desc {
+      color: var(--commet-steel);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* Form Fields Grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--commet-silver);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--commet-orange);
+      background: rgba(250, 116, 18, 0.02);
+      box-shadow: 0 0 12px rgba(250, 116, 18, 0.15);
+    }
+
+    /* Multiselect Horizon Cards */
+    .horizon-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .horizon-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .horizon-select-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      user-select: none;
+    }
+
+    .horizon-select-card:hover {
+      border-color: rgba(250, 116, 18, 0.3);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .horizon-select-card.selected {
+      border-color: var(--commet-orange);
+      background: rgba(250, 116, 18, 0.05);
+      box-shadow: 0 0 15px rgba(250, 116, 18, 0.12);
+    }
+
+    .horizon-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .horizon-select-card.selected .horizon-checkbox {
+      background: var(--commet-orange);
+      border-color: var(--commet-orange);
+    }
+
+    .horizon-checkbox svg {
+      width: 12px;
+      height: 12px;
+      color: #fff;
+      display: none;
+    }
+
+    .horizon-select-card.selected .horizon-checkbox svg {
+      display: block;
+    }
+
+    .horizon-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .horizon-title {
+      font-family: Eina02;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .horizon-desc {
+      font-size: 13px;
+      color: var(--commet-silver);
+      line-height: 1.4;
+    }
+
+    /* Radio pills for step 3 */
+    .radio-pills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .radio-pills {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .radio-pill {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--commet-silver);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+    }
+
+    .radio-pill:hover {
+      border-color: rgba(250, 116, 18, 0.3);
+      color: #fff;
+    }
+
+    .radio-pill.selected {
+      background: var(--commet-orange);
+      border-color: var(--commet-orange);
+      color: #fff;
+      box-shadow: 0 0 10px var(--commet-glow);
+    }
+
+    /* Navigation Buttons */
+    .wizard-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 28px;
+    }
+
+    .btn-nav {
+      font-family: Eina02;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      outline: none;
+    }
+
+    .btn-prev {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--commet-silver);
+    }
+
+    .btn-prev:hover {
+      border-color: #fff;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-next {
+      background: var(--commet-orange);
+      border: 1px solid var(--commet-orange);
+      color: #fff;
+      margin-left: auto;
+    }
+
+    .btn-next:hover {
+      box-shadow: 0 0 15px var(--commet-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-next:active {
+      transform: translateY(0);
+    }
+
+    /* Textarea character restriction */
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Confirmation Box overlay style */
+    .confirmation-box {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 16px;
+      padding: 40px 10px;
+    }
+
+    .confirmation-box.active {
+      display: flex;
+      animation: stepFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(250, 116, 18, 0.1);
+      border-radius: 50%;
+      border-top-color: var(--commet-orange);
+      animation: spin 1s linear infinite;
+      box-shadow: 0 0 15px rgba(250, 116, 18, 0.2);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--commet-steel);
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 80px;
+      width: 100%;
+    }
+
+    footer a {
+      color: var(--commet-orange);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header>
+    <a href="/" class="logo">
+      <svg id="eExyZTGsjq51" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 36px; height: 36px;">
+        <rect width="512" height="512" fill="none" stroke-width="0"></rect>
+        <g transform="translate(107.625, 207.315)">
+          <path d="M33.8,66.89C7.33,31.97,54.03-9.2,82.85,21.03c-2.01,1.76-4.1,3.77-6.09,5.59-6.89-7.4-18.02-8.74-27.05-4.71-6.1,2.72-10.87,7.76-13.26,14.01-2.38,6.21-1.69,12.4.98,18.38,1.97-1.2,4.99-2.74,7.06-3.84,5.68-2.98,11.38-5.91,17.12-8.78,10.26-5.23,20.11-10.59,30.26-16.01l1.73-.92,1.26-.65c.46.22.96.42,1.34.75l-.93.85c-.19.17-.91.85-1.08.96-6.05,6.04-11.94,11.12-17.94,17.55-4.15,4.53-8.26,9.09-12.32,13.69-2.74,3.09-5.86,6.68-8.79,9.59l-.87,1.08c16.99,4.92,32.47-4.55,37.28-21.17.38-1.3.69-2.61,1.11-3.9,0,8.26-3.57,18.83-9.52,24.68-6.31,6.21-14.32,8.85-23.04,8.83-7.47.06-14.8-1.94-21.21-5.77l-1.15.81-1.66,1.1-1.3.87c-2.11,1.44-4.8,3.11-7.02,4.43-.64-.51-2.21-.58-3.1-.69l-.06-.06c.22-.44,1.58-1.63,2.03-2.04-.31-.54-1.54-.88-2.14-.9l1.27-1.07,1.36-1.13c.51-.43.93-.77,1.47-1.16,1.2-1.12,4.34-3.51,5.21-4.51Z" fill="#FA7412"></path>
+        </g>
+      </svg>
+      <span class="logo-text">Commet</span>
+    </a>
+    <a href="/" class="btn-back" id="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span class="i18n-el" data-en="Back to Home" data-pt="Voltar ao Início">Back to Home</span>
+    </a>
+  </header>
+
+  <main>
+    <h1 class="i18n-el" data-en="Let's build what moves you" data-pt="Vamos construir o que te move">Let's build what moves you</h1>
+    <div class="subtitle i18n-el" 
+         data-en="Fill out this quick briefing to initiate your project onboarding with Commet's technology, AI, and design squad." 
+         data-pt="Preencha este breve briefing para iniciar o onboarding do seu projeto com o squad de tecnologia, IA e design da Commet.">
+         Fill out this quick briefing to initiate your project onboarding with Commet's technology, AI, and design squad.
+    </div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="lang-en" onclick="setLang('en')">English</button>
+      <button class="lang-btn" id="lang-pt" onclick="setLang('pt')">Português</button>
+    </div>
+
+    <!-- Onboarding Wizard Card -->
+    <div class="onboarding-card">
+      <div class="progress-container" id="progress-container">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+        <div class="step-indicators">
+          <div class="step-dot active" onclick="goToStep(1)">
+            <div class="step-number">1</div>
+            <span class="i18n-el" data-en="Contact" data-pt="Contato">Contact</span>
+          </div>
+          <div class="step-dot" onclick="goToStep(2)">
+            <div class="step-number">2</div>
+            <span class="i18n-el" data-en="Horizons" data-pt="Horizontes">Horizons</span>
+          </div>
+          <div class="step-dot" onclick="goToStep(3)">
+            <div class="step-number">3</div>
+            <span class="i18n-el" data-en="Details" data-pt="Detalhes">Details</span>
+          </div>
+          <div class="step-dot" onclick="goToStep(4)">
+            <div class="step-number">4</div>
+            <span class="i18n-el" data-en="Scope" data-pt="Escopo">Scope</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="onboarding-form" onsubmit="handleFormSubmit(event)">
+        <!-- STEP 1: Contact Details -->
+        <div class="wizard-step active" id="step-1">
+          <div class="step-title i18n-el" data-en="Who are you?" data-pt="Quem é você?">Who are you?</div>
+          <div class="step-desc i18n-el" data-en="Let's start with some basic contact information." data-pt="Vamos começar com algumas informações básicas de contato.">Let's start with some basic contact information.</div>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="first-name" class="i18n-el" data-en="First Name *" data-pt="Nome *">First Name *</label>
+              <input type="text" id="first-name" required placeholder="Rafael">
+            </div>
+            <div class="form-group">
+              <label for="last-name" class="i18n-el" data-en="Last Name *" data-pt="Sobrenome *">Last Name *</label>
+              <input type="text" id="last-name" required placeholder="França">
+            </div>
+            <div class="form-group">
+              <label for="email" class="i18n-el" data-en="Business Email *" data-pt="E-mail Corporativo *">Business Email *</label>
+              <input type="email" id="email" required placeholder="rafael@commet.pro">
+            </div>
+            <div class="form-group">
+              <label for="company" class="i18n-el" data-en="Company Name *" data-pt="Nome da Empresa *">Company Name *</label>
+              <input type="text" id="company" required placeholder="Commet Pro">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Strategic Horizons -->
+        <div class="wizard-step" id="step-2">
+          <div class="step-title i18n-el" data-en="Which strategic horizons are we tackling?" data-pt="Quais horizontes estratégicos vamos abordar?">Which strategic horizons are we tackling?</div>
+          <div class="step-desc i18n-el" data-en="Select one or more business dimensions that fit your project goals." data-pt="Selecione uma ou mais dimensões de negócio que se alinham ao seu projeto.">Select one or more business dimensions that fit your project goals.</div>
+          
+          <div class="horizon-cards-grid">
+            <!-- Card 1 -->
+            <div class="horizon-select-card" onclick="toggleHorizon(this, 'Software & Platforms')" data-id="software">
+              <div class="horizon-checkbox">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="horizon-details">
+                <span class="horizon-title i18n-el" data-en="Software & Platforms" data-pt="Software & Plataformas">Software & Platforms</span>
+                <span class="horizon-desc i18n-el" 
+                      data-en="Custom systems, internal dashboards, MVPs, integrations, and scalable B2B applications." 
+                      data-pt="Sistemas sob medida, dashboards internos, MVPs, integrações e aplicações B2B escaláveis.">
+                      Custom systems, internal dashboards, MVPs, integrations, and scalable B2B applications.
+                </span>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="horizon-select-card" onclick="toggleHorizon(this, 'Growth & Performance')" data-id="growth">
+              <div class="horizon-checkbox">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="horizon-details">
+                <span class="horizon-title i18n-el" data-en="Growth & Performance" data-pt="Crescimento & Performance">Growth & Performance</span>
+                <span class="horizon-desc i18n-el" 
+                      data-en="Data-driven media campaigns, landing pages, tracking, SEO, and acquisition pipelines." 
+                      data-pt="Campanhas de mídia orientadas a dados, landing pages, trackeamento, SEO e funis de atração.">
+                      Data-driven media campaigns, landing pages, tracking, SEO, and acquisition pipelines.
+                </span>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="horizon-select-card" onclick="toggleHorizon(this, 'AI & Automation')" data-id="ai">
+              <div class="horizon-checkbox">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="horizon-details">
+                <span class="horizon-title i18n-el" data-en="AI & Automation" data-pt="IA & Automação">AI & Automation</span>
+                <span class="horizon-desc i18n-el" 
+                      data-en="Workflows automation, LLM integrations, autonomous AI agents, and web scrapers." 
+                      data-pt="Automação de fluxos de trabalho, IA generativa, agentes autônomos de IA e scrapers de dados.">
+                      Workflows automation, LLM integrations, autonomous AI agents, and web scrapers.
+                </span>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="horizon-select-card" onclick="toggleHorizon(this, 'Web & Digital Presence')" data-id="web">
+              <div class="horizon-checkbox">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="horizon-details">
+                <span class="horizon-title i18n-el" data-en="Web & Digital Presence" data-pt="Presença Web & Digital">Web & Digital Presence</span>
+                <span class="horizon-desc i18n-el" 
+                      data-en="High-fidelity cinematic websites, blazing-fast speed optimization, and premium visual setups." 
+                      data-pt="Sites cinematográficos de alta fidelidade, otimização de velocidade extrema e design visual premium.">
+                      High-fidelity cinematic websites, blazing-fast speed optimization, and premium visual setups.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Project Scale -->
+        <div class="wizard-step" id="step-3">
+          <div class="step-title i18n-el" data-en="What is the scale of this project?" data-pt="Qual é a escala deste projeto?">What is the scale of this project?</div>
+          <div class="step-desc i18n-el" data-en="Help us understand the budget parameters and required delivery timeline." data-pt="Ajude-nos a entender os parâmetros de investimento e o cronograma ideal.">Help us understand the budget parameters and required delivery timeline.</div>
+          
+          <div style="display: flex; flex-direction: column; gap: 28px;">
+            <div class="form-group">
+              <label class="i18n-el" data-en="Estimated Investment Budget" data-pt="Orçamento de Investimento Estimado">Estimated Investment Budget</label>
+              <div class="radio-pills" id="budget-pills-en">
+                <div class="radio-pill selected" onclick="selectPill('budget', this, 'Under $10k')">Under $10k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, '$10k - $30k')">$10k - $30k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, '$30k - $100k')">$30k - $100k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, '$100k+')">$100k+</div>
+              </div>
+              <div class="radio-pills" id="budget-pills-pt" style="display:none;">
+                <div class="radio-pill selected" onclick="selectPill('budget', this, 'Menor que R$ 50k')">Menor que R$ 50k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, 'R$ 50k - R$ 150k')">R$ 50k - R$ 150k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, 'R$ 150k - R$ 500k')">R$ 150k - R$ 500k</div>
+                <div class="radio-pill" onclick="selectPill('budget', this, 'Mais de R$ 500k')">Mais de R$ 500k</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="i18n-el" data-en="Desired Timeline" data-pt="Cronograma Desejado">Desired Timeline</label>
+              <div class="radio-pills" id="timeline-pills-en">
+                <div class="radio-pill selected" onclick="selectPill('timeline', this, 'Immediate')">Immediate</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, '1 - 3 Months')">1 - 3 Months</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, '3 - 6 Months')">3 - 6 Months</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, 'Just exploring')">Just exploring</div>
+              </div>
+              <div class="radio-pills" id="timeline-pills-pt" style="display:none;">
+                <div class="radio-pill selected" onclick="selectPill('timeline', this, 'Imediato')">Imediato</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, '1 - 3 Meses')">1 - 3 Meses</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, '3 - 6 Meses')">3 - 6 Meses</div>
+                <div class="radio-pill" onclick="selectPill('timeline', this, 'Apenas explorando')">Apenas explorando</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Scope / Message -->
+        <div class="wizard-step" id="step-4">
+          <div class="step-title i18n-el" data-en="Describe your vision" data-pt="Descreva sua visão">Describe your vision</div>
+          <div class="step-desc i18n-el" data-en="Share the main challenges, objectives, or features of your upcoming project." data-pt="Compartilhe os principais desafios, objetivos ou funcionalidades do projeto.">Share the main challenges, objectives, or features of your upcoming project.</div>
+          
+          <div class="form-group">
+            <label for="scope-message" class="i18n-el" data-en="Project Scope & Objectives *" data-pt="Escopo do Projeto e Objetivos *">Project Scope & Objectives *</label>
+            <textarea id="scope-message" required placeholder="Provide a brief context or description..."></textarea>
+          </div>
+        </div>
+
+        <!-- Wizard Navigation Footer -->
+        <div class="wizard-nav" id="form-nav">
+          <button type="button" class="btn-nav btn-prev" id="btn-prev" onclick="prevStep()" style="visibility: hidden;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span class="i18n-el" data-en="Back" data-pt="Voltar">Back</span>
+          </button>
+          <button type="button" class="btn-nav btn-next" id="btn-next" onclick="nextStep()">
+            <span class="i18n-el" id="btn-next-text" data-en="Next Step" data-pt="Próximo Passo">Next Step</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Confirmation Overlay Box -->
+      <div class="confirmation-box" id="confirmation-box">
+        <div class="spinner"></div>
+        <div class="step-title i18n-el" data-en="Opening WhatsApp Business..." data-pt="Abrindo WhatsApp Business...">Opening WhatsApp Business...</div>
+        <div class="step-desc i18n-el" 
+             data-en="We are redirecting you to our secure messaging channel to finalize your onboarding briefing." 
+             data-pt="Estamos redirecionando você para o nosso canal de atendimento seguro para concluir o seu onboarding.">
+             We are redirecting you to our secure messaging channel to finalize your onboarding briefing.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Commet.pro. All rights reserved. Engineering Intelligent Growth.</p>
+  </footer>
+
+  <script>
+    let currentStep = 1;
+    let selectedLanguage = 'en';
+    
+    // Store selected options
+    const formData = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      company: '',
+      horizons: [],
+      budget: 'Under $10k',
+      timeline: 'Immediate',
+      scope: ''
+    };
+
+    // Auto-detect Portuguese browsers
+    window.addEventListener('DOMContentLoaded', () => {
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('pt')) {
+        setLang('pt');
+      } else {
+        setLang('en');
+      }
+      
+      // Auto placeholder support
+      updatePlaceholders();
+    });
+
+    function setLang(lang) {
+      selectedLanguage = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      
+      // Translate all i18n elements
+      document.querySelectorAll('.i18n-el').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) {
+          el.innerHTML = text;
+        }
+      });
+
+      // Show/Hide budget and timeline pills depending on locale
+      if (lang === 'pt') {
+        document.getElementById('budget-pills-en').style.display = 'none';
+        document.getElementById('budget-pills-pt').style.display = 'grid';
+        document.getElementById('timeline-pills-en').style.display = 'none';
+        document.getElementById('timeline-pills-pt').style.display = 'grid';
+        
+        // Update default selection if first load/no user edit
+        if (formData.budget === 'Under $10k') formData.budget = 'Menor que R$ 50k';
+        if (formData.timeline === 'Immediate') formData.timeline = 'Imediato';
+      } else {
+        document.getElementById('budget-pills-en').style.display = 'grid';
+        document.getElementById('budget-pills-pt').style.display = 'none';
+        document.getElementById('timeline-pills-en').style.display = 'grid';
+        document.getElementById('timeline-pills-pt').style.display = 'none';
+        
+        if (formData.budget === 'Menor que R$ 50k') formData.budget = 'Under $10k';
+        if (formData.timeline === 'Imediato') formData.timeline = 'Immediate';
+      }
+
+      updatePlaceholders();
+      updateButtons();
+    }
+
+    function updatePlaceholders() {
+      const fn = document.getElementById('first-name');
+      const ln = document.getElementById('last-name');
+      const em = document.getElementById('email');
+      const cp = document.getElementById('company');
+      const sc = document.getElementById('scope-message');
+
+      if (selectedLanguage === 'pt') {
+        if (fn) fn.placeholder = "Rafael";
+        if (ln) ln.placeholder = "França";
+        if (em) em.placeholder = "seu-email@empresa.com";
+        if (cp) cp.placeholder = "Minha Empresa S/A";
+        if (sc) sc.placeholder = "Descreva brevemente o contexto do seu projeto, objetivos de crescimento ou integrações necessárias...";
+      } else {
+        if (fn) fn.placeholder = "Rafael";
+        if (ln) ln.placeholder = "França";
+        if (em) em.placeholder = "rafael@commet.pro";
+        if (cp) cp.placeholder = "Commet Pro";
+        if (sc) sc.placeholder = "Provide a brief context or description of your upcoming project, growth goals, software specifications, or automations needed...";
+      }
+    }
+
+    function toggleHorizon(cardEl, horizonName) {
+      cardEl.classList.toggle('selected');
+      const isSelected = cardEl.classList.contains('selected');
+      
+      if (isSelected) {
+        if (!formData.horizons.includes(horizonName)) {
+          formData.horizons.push(horizonName);
+        }
+      } else {
+        formData.horizons = formData.horizons.filter(h => h !== horizonName);
+      }
+    }
+
+    function selectPill(type, pillEl, value) {
+      // Find siblings of pillEl and unselect them
+      const parent = pillEl.parentElement;
+      parent.querySelectorAll('.radio-pill').forEach(pill => pill.classList.remove('selected'));
+      pillEl.classList.add('selected');
+      
+      formData[type] = value;
+    }
+
+    function goToStep(step) {
+      // Form validation for step progression
+      if (step > currentStep) {
+        if (!validateCurrentStep()) {
+          return;
+        }
+      }
+
+      currentStep = step;
+      
+      // Update wizard steps visibility
+      document.querySelectorAll('.wizard-step').forEach((el, index) => {
+        if (index + 1 === step) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+
+      // Update progress bar
+      const fillPercentage = (step / 4) * 100;
+      document.getElementById('progress-bar-fill').style.width = fillPercentage + '%';
+
+      // Update indicators active states
+      document.querySelectorAll('.step-dot').forEach((dot, index) => {
+        const stepNum = index + 1;
+        dot.classList.remove('active', 'completed');
+        if (stepNum === step) {
+          dot.classList.add('active');
+        } else if (stepNum < step) {
+          dot.classList.add('completed');
+        }
+      });
+
+      // Manage buttons visibility
+      const btnPrev = document.getElementById('btn-prev');
+      if (step === 1) {
+        btnPrev.style.visibility = 'hidden';
+      } else {
+        btnPrev.style.visibility = 'visible';
+      }
+
+      updateButtons();
+    }
+
+    function updateButtons() {
+      const btnNextText = document.getElementById('btn-next-text');
+      if (currentStep === 4) {
+        btnNextText.setAttribute('data-en', 'Launch Project');
+        btnNextText.setAttribute('data-pt', 'Iniciar Projeto');
+        btnNextText.innerHTML = selectedLanguage === 'pt' ? 'Iniciar Projeto' : 'Launch Project';
+      } else {
+        btnNextText.setAttribute('data-en', 'Next Step');
+        btnNextText.setAttribute('data-pt', 'Próximo Passo');
+        btnNextText.innerHTML = selectedLanguage === 'pt' ? 'Próximo Passo' : 'Next Step';
+      }
+    }
+
+    function nextStep() {
+      if (currentStep < 4) {
+        goToStep(currentStep + 1);
+      } else {
+        // Trigger submit
+        const form = document.getElementById('onboarding-form');
+        if (form.reportValidity()) {
+          form.dispatchEvent(new Event('submit'));
+        }
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        goToStep(currentStep - 1);
+      }
+    }
+
+    function validateCurrentStep() {
+      if (currentStep === 1) {
+        const fn = document.getElementById('first-name');
+        const ln = document.getElementById('last-name');
+        const em = document.getElementById('email');
+        const cp = document.getElementById('company');
+        return fn.reportValidity() && ln.reportValidity() && em.reportValidity() && cp.reportValidity();
+      }
+      if (currentStep === 4) {
+        const sc = document.getElementById('scope-message');
+        return sc.reportValidity();
+      }
+      return true;
+    }
+
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Capture final inputs
+      formData.firstName = document.getElementById('first-name').value;
+      formData.lastName = document.getElementById('last-name').value;
+      formData.email = document.getElementById('email').value;
+      formData.company = document.getElementById('company').value;
+      formData.scope = document.getElementById('scope-message').value;
+
+      // Animate interface to showing loading redirect
+      document.getElementById('onboarding-form').style.display = 'none';
+      document.getElementById('progress-container').style.display = 'none';
+      document.getElementById('confirmation-box').style.display = 'flex';
+
+      // Assemble final briefing details to push via API contact
+      try {
+        await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            message: `[Start Onboarding]\nCompany: ${formData.company}\nHorizons: ${formData.horizons.join(', ') || 'None selected'}\nBudget: ${formData.budget}\nTimeline: ${formData.timeline}\nScope: ${formData.scope}`
+          })
+        });
+      } catch (err) {
+        console.error("API contact error (swallowed for fallback redirect):", err);
+      }
+
+      // Format beautiful pre-filled message text for WhatsApp Business API
+      let text = '';
+      if (selectedLanguage === 'pt') {
+        text = `Olá Commet! Gostaria de iniciar meu projeto de onboarding:
+- Nome: ${formData.firstName} ${formData.lastName}
+- E-mail: ${formData.email}
+- Empresa: ${formData.company}
+- Horizontes: ${formData.horizons.join(', ') || 'Nenhum selecionado'}
+- Orçamento: ${formData.budget}
+- Cronograma: ${formData.timeline}
+
+Visão Geral do Escopo:
+${formData.scope}`;
+      } else {
+        text = `Hello Commet! I would like to initiate my project onboarding:
+- Name: ${formData.firstName} ${formData.lastName}
+- Email: ${formData.email}
+- Company: ${formData.company}
+- Horizons: ${formData.horizons.join(', ') || 'None selected'}
+- Budget: ${formData.budget}
+- Timeline: ${formData.timeline}
+
+Scope Overview:
+${formData.scope}`;
+      }
+
+      const encodedText = encodeURIComponent(text);
+      
+      setTimeout(() => {
+        window.open("https://wa.me/5511999999999?text=" + encodedText, "_blank");
+        
+        // Reset states
+        setTimeout(() => {
+          document.getElementById('onboarding-form').style.display = 'block';
+          document.getElementById('progress-container').style.display = 'block';
+          document.getElementById('confirmation-box').style.display = 'none';
+          
+          // Clear inputs
+          document.getElementById('onboarding-form').reset();
+          formData.horizons = [];
+          document.querySelectorAll('.horizon-select-card').forEach(card => card.classList.remove('selected'));
+          goToStep(1);
+        }, 1000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

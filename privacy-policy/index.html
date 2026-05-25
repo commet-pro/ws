@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Commet.pro - Technology, AI and Performance Studio</title>
+  <meta name="description" content="Privacy Policy for Commet.pro. Learn how we handle, protect, and respect your personal data in compliance with GDPR and LGPD.">
+  <link rel="canonical" href="https://commet.pro/privacy-policy/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy | Commet.pro">
+  <meta property="og:description" content="Learn how we protect and respect your privacy at Commet.pro.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://commet.pro/privacy-policy/">
+  <meta property="og:image" content="https://commet.pro/rel.jpg">
+  <meta property="og:site_name" content="Commet.pro">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  <style>
+    :root {
+      --commet-orange: #FA7412;
+      --commet-orange-deep: #E56615;
+      --commet-black: #030304;
+      --commet-graphite: #0C0C0E;
+      --commet-white: #F8F8F5;
+      --commet-silver: #BEC2CA;
+      --commet-steel: #6C727C;
+      --commet-glow: rgba(250, 116, 18, 0.42);
+      --bg: #1C1C1E;
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: Eina01;
+      font-style: normal;
+      font-weight: 300;
+      src: url(/fonts/Eina01-Light.woff2) format("woff2");
+    }
+    @font-face {
+      font-display: swap;
+      font-family: Eina01;
+      font-style: normal;
+      font-weight: 400;
+      src: url(/fonts/Eina01-Regular.woff2) format("woff2");
+    }
+    @font-face {
+      font-display: swap;
+      font-family: Eina02;
+      font-style: normal;
+      font-weight: 700;
+      src: url(/fonts/Eina02-Bold.woff2) format("woff2");
+    }
+
+    body, html {
+      background-color: var(--bg);
+      color: var(--commet-white);
+      font-family: Eina01, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle background grid & radial glow */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(250, 116, 18, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(250, 116, 18, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      box-sizing: border-box;
+      background: rgba(28, 28, 30, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 10;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        padding: 0 24px;
+        height: 80px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 12px;
+    }
+
+    .logo-text {
+      font-family: Eina02;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .btn-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background: var(--commet-orange);
+      border-color: var(--commet-orange);
+      box-shadow: 0 0 15px var(--commet-glow);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 140px auto 100px;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 600px) {
+      main {
+        margin-top: 100px;
+        padding: 0 24px;
+      }
+    }
+
+    h1 {
+      font-family: Eina02;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    .subtitle {
+      color: var(--commet-steel);
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    /* Language Switcher Tab */
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px;
+      border-radius: 100px;
+      width: fit-content;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--commet-steel);
+      padding: 8px 20px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--commet-orange);
+      color: #fff;
+      box-shadow: 0 0 10px var(--commet-glow);
+    }
+
+    /* Policy Content Styling */
+    .content-section {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: none;
+      line-height: 1.7;
+    }
+
+    .content-section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-family: Eina02;
+      font-size: 24px;
+      color: #fff;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--commet-silver);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: var(--commet-silver);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--commet-steel);
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: var(--commet-orange);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <svg id="eExyZTGsjq51" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 36px; height: 36px;">
+        <rect width="512" height="512" fill="none" stroke-width="0"></rect>
+        <g transform="translate(107.625, 207.315)">
+          <path d="M33.8,66.89C7.33,31.97,54.03-9.2,82.85,21.03c-2.01,1.76-4.1,3.77-6.09,5.59-6.89-7.4-18.02-8.74-27.05-4.71-6.1,2.72-10.87,7.76-13.26,14.01-2.38,6.21-1.69,12.4.98,18.38,1.97-1.2,4.99-2.74,7.06-3.84,5.68-2.98,11.38-5.91,17.12-8.78,10.26-5.23,20.11-10.59,30.26-16.01l1.73-.92,1.26-.65c.46.22.96.42,1.34.75l-.93.85c-.19.17-.91.85-1.08.96-6.05,6.04-11.94,11.12-17.94,17.55-4.15,4.53-8.26,9.09-12.32,13.69-2.74,3.09-5.86,6.68-8.79,9.59l-.87,1.08c16.99,4.92,32.47-4.55,37.28-21.17.38-1.3.69-2.61,1.11-3.9,0,8.26-3.57,18.83-9.52,24.68-6.31,6.21-14.32,8.85-23.04,8.83-7.47.06-14.8-1.94-21.21-5.77l-1.15.81-1.66,1.1-1.3.87c-2.11,1.44-4.8,3.11-7.02,4.43-.64-.51-2.21-.58-3.1-.69l-.06-.06c.22-.44,1.58-1.63,2.03-2.04-.31-.54-1.54-.88-2.14-.9l1.27-1.07,1.36-1.13c.51-.43.93-.77,1.47-1.16,1.2-1.12,4.34-3.51,5.21-4.51Z" fill="#FA7412"></path>
+        </g>
+      </svg>
+      <span class="logo-text">Commet</span>
+    </a>
+    <a href="/" class="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Back to Home
+    </a>
+  </header>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <div class="subtitle">Last updated: May 2026</div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('pt')">Português</button>
+    </div>
+
+    <!-- English Version -->
+    <div id="content-en" class="content-section active">
+      <h2>1. Introduction</h2>
+      <p>Welcome to Commet.pro. We operate as a premium B2B technology growth, AI, and performance studio. We are committed to protecting and respecting your personal data. This Privacy Policy outlines how we collect, process, secure, and manage your data when you visit our website or interact with us.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We only collect data that is strictly necessary to communicate with you and provide our services:</p>
+      <ul>
+        <li><strong>Contact Information:</strong> First Name, Last Name, Email, and message contents when filled through our contact forms.</li>
+        <li><strong>Communication Data:</strong> Phone number and metadata if you contact us directly via our WhatsApp Business link.</li>
+        <li><strong>Analytical & Technical Data:</strong> IP address, browser type, operating system, and browsing behavior collected via Google Analytics and cookie technologies to monitor site performance.</li>
+      </ul>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>Your information is used strictly to:</p>
+      <ul>
+        <li>Respond to your project inquiries, requests, and questions.</li>
+        <li>Optimize our website, analytics, and service performance.</li>
+        <li>Deliver custom software integrations, campaigns, and automation architectures.</li>
+        <li>Fulfill legal and security obligations.</li>
+      </ul>
+
+      <h2>4. Data Storage and Security</h2>
+      <p>We employ top-tier technical and organizational measures to safeguard your personal data against unauthorized access, loss, or alteration. Our database pipelines are securely encrypted, and static communications are conducted via secure HTTPS channels.</p>
+
+      <h2>5. Your Rights (GDPR & LGPD)</h2>
+      <p>Depending on your location, you have several rights regarding your personal data under the European General Data Protection Regulation (GDPR) and the Brazilian General Personal Data Protection Law (LGPD):</p>
+      <ul>
+        <li><strong>Access & Correction:</strong> You can request a copy of the data we hold on you or ask to correct errors.</li>
+        <li><strong>Erasure & Deletion ("Right to be Forgotten"):</strong> You can request that we delete your personal data from our active systems.</li>
+        <li><strong>Portability:</strong> You can request the transfer of your data to another provider in a structured format.</li>
+        <li><strong>Consent Withdrawal:</strong> You can withdraw your consent to data processing at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us directly at <a href="mailto:contact@commet.pro" style="color: var(--commet-orange);">contact@commet.pro</a>.</p>
+
+      <h2>6. Changes to this Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect regulatory shifts or changes in our operational procedures. We encourage you to review this page periodically.</p>
+    </div>
+
+    <!-- Portuguese Version -->
+    <div id="content-pt" class="content-section">
+      <h2>1. Introdução</h2>
+      <p>Bem-vindo ao Commet.pro. Operamos como um estúdio de tecnologia, inteligência artificial e performance B2B. Estamos comprometidos em proteger e respeitar seus dados pessoais. Esta Política de Privacidade descreve como coletamos, processamos, protegemos e gerenciamos seus dados quando você visita nosso site ou interage conosco.</p>
+
+      <h2>2. Informações que Coletamos</h2>
+      <p>Coletamos apenas os dados estritamente necessários para nos comunicarmos com você e prestarmos nossos serviços:</p>
+      <ul>
+        <li><strong>Informações de Contato:</strong> Nome, Sobrenome, E-mail e conteúdo da mensagem enviados através dos nossos formulários de contato.</li>
+        <li><strong>Dados de Comunicação:</strong> Número de telefone e metadados se você entrar em contato conosco diretamente pelo link do WhatsApp Business.</li>
+        <li><strong>Dados Técnicos e Analíticos:</strong> Endereço IP, tipo de navegador, sistema operacional e comportamento de navegação coletados via Google Analytics e cookies para monitoramento de performance.</li>
+      </ul>
+
+      <h2>3. Como Utilizamos as Informações</h2>
+      <p>Seus dados são usados estritamente para:</p>
+      <ul>
+        <li>Responder às suas dúvidas, propostas de projetos e perguntas.</li>
+        <li>Otimizar nosso site, métricas de tráfego e qualidade da interface.</li>
+        <li>Entregar soluções personalizadas de software, campanhas e arquitetura de IA.</li>
+        <li>Cumprir obrigações legais ou de segurança cibernética.</li>
+      </ul>
+
+      <h2>4. Armazenamento e Segurança dos Dados</h2>
+      <p>Adotamos medidas técnicas e organizacionais de alto nível para proteger seus dados pessoais contra acessos não autorizados, perda ou alteração. Nossos fluxos de banco de dados são criptografados e as comunicações ocorrem por canais HTTPS seguros.</p>
+
+      <h2>5. Seus Direitos (LGPD e GDPR)</h2>
+      <p>De acordo com a Lei Geral de Proteção de Dados Pessoais (LGPD) no Brasil e o Regulamento Geral sobre a Proteção de Dados (GDPR) na Europa, você possui diversos direitos garantidos:</p>
+      <ul>
+        <li><strong>Acesso e Correção:</strong> Você pode solicitar uma cópia dos dados que possuímos sobre você ou solicitar correções.</li>
+        <li><strong>Exclusão e Eliminação:</strong> Você tem o direito de solicitar que apaguemos seus dados de nossos sistemas ativos.</li>
+        <li><strong>Portabilidade:</strong> Você pode pedir a transferência dos seus dados para outro prestador em formato estruturado.</li>
+        <li><strong>Revogação de Consentimento:</strong> Você pode retirar sua autorização para o processamento de dados a qualquer momento.</li>
+      </ul>
+      <p>Para exercer qualquer um destes direitos, entre em contato direto pelo e-mail <a href="mailto:contact@commet.pro" style="color: var(--commet-orange);">contact@commet.pro</a>.</p>
+
+      <h2>6. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças regulatórias ou em nossos procedimentos operacionais. Recomendamos que você revise esta página regularmente.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Commet.pro. All rights reserved. Engineering Intelligent Growth.</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+      
+      if (lang === 'en') {
+        document.getElementById('content-en').classList.add('active');
+        document.querySelector('.lang-btn:nth-child(1)').classList.add('active');
+      } else {
+        document.getElementById('content-pt').classList.add('active');
+        document.querySelector('.lang-btn:nth-child(2)').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

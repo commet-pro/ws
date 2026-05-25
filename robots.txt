@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /start/
+Allow: /privacy-policy/
+Allow: /cookie-policy/
+
+# Exclude static bundles or Nuxt assets that don't need semantic crawls
+Disallow: /_nuxt/
+Disallow: /api/
+
+# Host sitemap configuration
+Sitemap: https://commet.pro/sitemap.xml

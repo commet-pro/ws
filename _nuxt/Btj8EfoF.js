@@ -15847,7 +15847,7 @@ const animate_1MY2JJFgCJ554zj0WkzEgGqMxNdIOpe_c9ooicWtM1M = /* @__PURE__ */ defi
   });
 });
 const homeHeader = { "title": "Engineering<br>Intelligent Growth.", "description": "Commet builds digital solutions for B2B companies that need to move faster: websites, campaigns, automations, platforms, apps and AI-powered systems.", "button": "Explore Solutions" };
-const homeOVFH = { "title": "Explore our<br><span>digital horizons</span>", "description": "From performance to product, Commet designs and builds the systems that make companies move.<br>We focus on four strategic horizons: Software & Platforms, Growth & Performance, AI & Automation, and Web & Digital Presence." };
+const homeOVFH = { "title": "Explore our<br><span>digital horizons</span>", "description": "From performance to product, Commet designs and builds the systems that make companies move.<br>We focus on four strategic horizons: Software & Platforms, Growth & Performance, AI & Automation, and Web & Digital Presence.", "multiplier": "6.6" };
 const homeAirplane = { "title": "Software <br>& Platforms", "description": "We design and build custom software, internal tools, dashboards, MVPs, micro-SaaS and platforms for companies that need more than off-the-shelf tools.", "button": "Discover More", "expandedTitle": "Software <br>& Platforms", "expandedDescription": "We design and build custom software, internal tools, dashboards, MVPs, micro-SaaS and platforms for companies that need more than off-the-shelf tools.<br><br>Through advanced development methodologies and modern technology stacks, we build custom applications that optimize operations and create unique competitive advantages.<br><br>Whether you need to automate a manual process, integrate complex API endpoints, or launch a brand new SaaS product, our engineering squad provides the technical depth and product thinking to deliver robust, secure, and highly scalable solutions." };
 const homeWindmill = { "title": "Growth <br>& Performance", "description": "We create the digital assets that make companies visible, relevant and measurable: campaigns, creatives, landing pages, SEO, social media and conversion flows.", "button": "Discover More", "expandedTitle": "Growth & Performance", "expandedDescription": "We create the digital assets that make companies visible, relevant and measurable: campaigns, creatives, landing pages, SEO, social media and conversion flows.<br><br>Our approach combines creative direction with deep analytical discipline to build conversion pipelines that perform. We manage budgets across channels, craft compelling visual narratives, and optimize every pixel of your digital footprint to drive sustainable B2B customer acquisition." };
 const homeRocket = { "title": "AI <br>& Automation", "description": "We apply artificial intelligence to automate workflows, generate content, support sales, analyze data and create agents that reduce manual work.", "button": "Discover More", "expandedTitle": "AI & Automation", "expandedDescription": "We apply artificial intelligence to automate workflows, generate content, support sales, analyze data and create agents that reduce manual work.<br><br>By integrating state-of-the-art LLMs, custom training databases, and intelligent workflow routers, we help businesses unlock new levels of efficiency. Our solutions range from simple automated reply flows and custom data extraction scrapers to complex, autonomous AI agents acting as tireless members of your operations squad." };
@@ -15859,6 +15859,7 @@ const homeNews = { "title": "News & Insights" };
 const homeLBTFT = { "title": "Ready to create impact?", "description": "Every company has a next version. Commet helps build yours.<br>Reach out to Commet® to explore how we can collaborate and build your technology, AI, and performance pipelines.", "button": "Talk to Commet", "footer": { "copyright": "© 2026 Commet.pro. All rights reserved.<br>Engineering Intelligent Growth.", "linkedin": "Join us on LinkedIn", "privacyPolicy": "Privacy Policy", "cookiePolicy": "Cookie Policy" } };
 const contactForm = { "title": "Talk to Commet", "description": "Reach out to explore how we can collaborate and build your technology, AI, and performance pipelines.", "emailPlaceholder": "Email", "firstNamePlaceholder": "First Name", "lastNamePlaceholder": "Last Name", "messagePlaceholder": "Message", "submitButton": "Send Message", "confirmationTitle": "Opening WhatsApp...", "confirmationMessage": "We are redirecting you to our WhatsApp Business...", "closeButton": "Close" };
 const infracore = { "title": "The Commet Core", "description": "A compact operating system for intelligent growth: strategy, AI, design, code, content and performance moving as one.<br>Commet Core connects discovery, creative direction, product thinking, software engineering and data optimization into one execution layer. It is how a small team delivers with the speed of a squad and the precision of a product company." };
+const verticalWords = { "commit": "Commit", "code": "Code", "launch": "Launch" };
 const en = {
   homeHeader,
   homeOVFH,
@@ -15872,12 +15873,261 @@ const en = {
   homeNews,
   homeLBTFT,
   contactForm,
-  infracore
+  infracore,
+  verticalWords
 };
+const pt = {
+  homeHeader: {
+    "title": "Engineering<br>Intelligent Growth.",
+    "description": "A Commet desenvolve soluções digitais para empresas B2B que precisam se mover mais rápido: sites, campanhas, automações, plataformas, apps e sistemas inteligentes com IA.",
+    "button": "Explorar Soluções"
+  },
+  homeOVFH: {
+    "title": "Explore nossos<br><span>horizontes digitais</span>",
+    "description": "De performance a produto, a Commet projeta e constrói os sistemas que movem empresas.<br>Focamos em quatro horizontes estratégicos: Software & Plataformas, Crescimento & Performance, IA & Automação e Presença Web & Digital.",
+    "multiplier": "8.0"
+  },
+  verticalWords: {
+    "commit": "Commit",
+    "code": "Code",
+    "launch": "Launch"
+  },
+  homeAirplane: {
+    "title": "Software <br>& Plataformas",
+    "description": "Projetamos e construímos softwares personalizados, ferramentas internas, dashboards, MVPs, micro-SaaS e plataformas para empresas que precisam de mais do que soluções prontas.",
+    "button": "Descobrir Mais",
+    "expandedTitle": "Software <br>& Plataformas",
+    "expandedDescription": "Projetamos e construímos softwares personalizados, ferramentas internas, dashboards, MVPs, micro-SaaS e plataformas para empresas que precisam de mais do que soluções prontas.<br><br>Através de metodologias de desenvolvimento avançadas e stacks de tecnologia modernas, criamos aplicações sob medida que otimizam operações e geram vantagens competitivas exclusivas.<br><br>Seja para automatizar um processo manual, integrar endpoints de API complexos ou lançar um produto SaaS totalmente novo, nosso squad de engenharia oferece a profundidade técnica e o pensamento de produto necessários para entregar soluções robustas, seguras e altamente escaláveis."
+  },
+  homeWindmill: {
+    "title": "Crescimento <br>& Performance",
+    "description": "Criamos os ativos digitais que tornam empresas visíveis, relevantes e mensuráveis: campanhas, criativos, landing pages, SEO, redes sociais e fluxos de conversão.",
+    "button": "Descobrir Mais",
+    "expandedTitle": "Crescimento & Performance",
+    "expandedDescription": "Criamos os ativos digitais que tornam empresas visíveis, relevantes e mensuráveis: campanhas, criativos, landing pages, SEO, redes sociais e fluxos de conversão.<br><br>Nossa abordagem combina direção criativa com profunda disciplina analítica para construir funis de conversão de alto desempenho. Gerenciamos orçamentos em múltiplos canais, elaboramos narrativas visuais atraentes e otimizamos cada pixel da sua presença digital para impulsionar a aquisição sustentável de clientes B2B."
+  },
+  homeRocket: {
+    "title": "IA <br>& Automação",
+    "description": "Aplicamos inteligência artificial para automatizar fluxos de trabalho, gerar conteúdo, apoiar vendas, analisar dados e criar agentes que reduzem o trabalho manual.",
+    "button": "Descobrir Mais",
+    "expandedTitle": "IA & Automação",
+    "expandedDescription": "Aplicamos inteligência artificial para automatizar fluxos de trabalho, gerar conteúdo, apoiar vendas, analisar dados e criar agentes que reduzem o trabalho manual.<br><br>Integrando LLMs de última geração, bases de dados personalizadas e roteadores inteligentes de fluxos de trabalho, ajudamos empresas a desbloquear novos níveis de eficiência. Nossas soluções variam de fluxos simples de respostas automatizadas e robôs para extração de dados customizados até agentes de IA complexos e autônomos que atuam como membros incansáveis de seu time de operações."
+  },
+  homeDatacenter: {
+    "title": "Presença <br>Web & Digital",
+    "description": "Construímos sites, landing pages e experiências digitais que comunicam valor, carregam rápido e convertem melhor em qualquer dispositivo.",
+    "button": "Descobrir Mais",
+    "expandedTitle": "Presença Web & Digital",
+    "expandedDescription": "Construímos sites, landing pages e experiências digitais que comunicam valor, carregam rápido e convertem melhor em qualquer dispositivo.<br><br>Um site moderno precisa ser rápido, seguro, esteticamente impecável e totalmente otimizado para conversão. Combinamos layouts limpos e semânticos em HTML/CSS, microinterações de alta fidelidade, higiene de SEO impecável e configurações de hospedagem ultrarrápidas para criar experiências que impressionam os visitantes e os transformam em clientes."
+  },
+  homeFVTV: {
+    "title": "De Spark ao Impacto",
+    "description": "Uma disciplina de quatro etapas para transformar ideias em sistemas digitais de alta performance.<br>O método da Commet garante uma entrega rápida e confiável, sem abrir mão da qualidade criativa ou da estabilidade operacional.",
+    "define": {
+      "title": "Discover",
+      "description": "Entendemos seu modelo B2B, alinhamos metas de crescimento, identificamos pontos de atrito e definimos o caminho técnico e criativo."
+    },
+    "develop": {
+      "title": "Design",
+      "description": "Projetamos protótipos de UX de alta fidelidade, desenhamos sistemas visuais modernos e estabelecemos frameworks de marca coesos."
+    },
+    "derisk": {
+      "title": "Build",
+      "description": "Escrevemos código limpo, integramos pipelines de APIs robustos, configuramos agentes de IA e desenvolvemos produtos digitais de alta performance."
+    },
+    "deliver": {
+      "title": "Launch",
+      "description": "Fazemos o deploy com segurança absoluta, realizamos auditorias de rastreamento de conversão, otimizamos o SEO técnico e ativamos funis de crescimento."
+    }
+  },
+  homeHeroes: {
+    "title": "Tornamos o seu negócio<br>o sinal principal",
+    "description": "O trabalho é nosso. O impulso é seu. Ajudamos times B2B a transformar ambição digital em sistemas que funcionam.",
+    "governments": {
+      "title": "Founders",
+      "description": "Atuamos como seu squad de tecnologia e produto sob demanda — projetando MVPs, escalando arquiteturas e transformando visões em realidade pronta para investimento."
+    },
+    "investors": {
+      "title": "Marketing Teams",
+      "description": "Construímos landing pages focadas em conversão, pipelines de SEO de alta performance e ativos criativos que geram maior ROI para seu investimento em mídia."
+    },
+    "localCommunities": {
+      "title": "Operations",
+      "description": "Implementamos fluxos de trabalho inteligentes, sistemas de extração de dados automatizados e agentes de IA para eliminar tarefas manuais e acelerar a execução do time."
+    }
+  },
+  homeCardsScroll: {
+    "title": "Conheça o Squad",
+    "team": {
+      "filippoGhirelli": {
+        "name": "Rafael França",
+        "role": "Co-Founder & Chief Product Officer (CPDO)",
+        "bio": "Co-Founder & Chief Product Officer. Visionário em experiências digitais, especialista em transformar estratégias complexas de marca em produtos digitais premium de alta conversão. Liderando UI/UX design, design systems e estratégia de produto, Rafael garante que cada ponto de contato digital ofereça beleza cinematográfica e engajamento perfeito para o usuário."
+      },
+      "claudioBracci": {
+        "name": "Flavio Henrique",
+        "role": "Co-Founder & Chief Technology Officer (CTO)",
+        "bio": "Co-Founder & Chief Technology Officer. Arquiteto de software veterano e engenheiro de sistemas dedicado a construir infraestruturas digitais de alta performance, seguras e escaláveis. Especialista em WebGL, plataformas personalizadas, soluções em Nuvem e integrações de IA, Flavio lidera o squad de engenharia da Commet para transformar ideias complexas em realidade ultrarrápida."
+      },
+      "andreaCaturelli": {
+        "name": "Especialista Sob Demanda",
+        "role": "Especialista em Desenvolvimento Web & SEO Técnico",
+        "bio": "Desenvolvedor frontend e mago do SEO técnico. Unindo a excelência estética ao destaque nos motores de busca, garantindo marcações semânticas, arquiteturas limpas e configurações de SEO impecáveis que ranqueiam e convertem."
+      },
+      "fulvioMaccarone": {
+        "name": "Especialista Sob Demanda",
+        "role": "Especialista em Growth & Performance Marketing",
+        "bio": "Profissional de marketing de performance e estrategista de crescimento. Desenvolvendo campanhas de funil B2B, setups de mídia programática e rastreamento de atribuição para escalar a aquisição de clientes, garantindo que cada byte de tecnologia se traduza diretamente em tração de negócios."
+      }
+    }
+  },
+  homeNews: {
+    "title": "Novidades & Insights"
+  },
+  homeLBTFT: {
+    "title": "Pronto para gerar impacto?",
+    "description": "Toda empresa tem uma próxima versão. A Commet ajuda a construir a sua.<br>Entre em contato com a Commet® para explorarmos como podemos colaborar e desenvolver seus pipelines de tecnologia, IA e performance.",
+    "button": "Falar com a Commet",
+    "footer": {
+      "copyright": "© 2026 Commet.pro. Todos os direitos reservados.<br>Engineering Intelligent Growth.",
+      "linkedin": "Acompanhe-nos no LinkedIn",
+      "privacyPolicy": "Política de Privacidade",
+      "cookiePolicy": "Política de Cookies"
+    }
+  },
+  contactForm: {
+    "title": "Falar com a Commet",
+    "description": "Entre em contato para explorarmos como podemos colaborar e desenvolver seus pipelines de tecnologia, IA e performance.",
+    "emailPlaceholder": "E-mail",
+    "firstNamePlaceholder": "Nome",
+    "lastNamePlaceholder": "Sobrenome",
+    "messagePlaceholder": "Mensagem",
+    "submitButton": "Enviar Mensagem",
+    "confirmationTitle": "Abrindo o WhatsApp...",
+    "confirmationMessage": "Estamos redirecionando você para o nosso WhatsApp Business...",
+    "closeButton": "Fechar"
+  },
+  infracore: {
+    "title": "The Commet Core",
+    "description": "Um sistema operacional compacto para crescimento inteligente: estratégia, IA, design, código, conteúdo e performance se movendo como um só.<br>O Commet Core conecta discovery, direção criativa, mentalidade de produto, engenharia de software e otimização de dados em uma única camada de execução. É assim que uma equipe compacta entrega com a velocidade de um squad e a precisão de uma empresa de produto."
+  }
+};
+
+const currentLocale = ref("en");
+
+function injectLanguageSwitcher() {
+  if (document.getElementById("commet-lang-switcher-container")) return;
+
+  const style = document.createElement("style");
+  style.id = "commet-lang-switcher-styles";
+  style.innerHTML = `
+    .commet-lang-switcher {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 10000;
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      background: rgba(12, 12, 14, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .commet-lang-switcher:hover {
+      border-color: rgba(250, 116, 18, 0.3);
+      box-shadow: 0 8px 32px rgba(250, 116, 18, 0.1), 0 0 12px rgba(250, 116, 18, 0.05);
+    }
+    .commet-lang-btn {
+      background: transparent;
+      border: none;
+      color: #BEC2CA;
+      font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      user-select: none;
+      outline: none;
+    }
+    .commet-lang-btn:hover {
+      color: #F8F8F5;
+    }
+    .commet-lang-btn.active {
+      background: #FA7412;
+      color: #030304;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(250, 116, 18, 0.4);
+    }
+    @media (max-width: 768px) {
+      .commet-lang-switcher {
+        bottom: 16px;
+        right: 16px;
+      }
+      .commet-lang-btn {
+        padding: 5px 12px;
+        font-size: 10px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const container = document.createElement("div");
+  container.id = "commet-lang-switcher-container";
+  container.className = "commet-lang-switcher";
+
+  const btnEn = document.createElement("button");
+  btnEn.className = "commet-lang-btn";
+  btnEn.textContent = "EN";
+  btnEn.setAttribute("aria-label", "Switch to English");
+
+  const btnPt = document.createElement("button");
+  btnPt.className = "commet-lang-btn";
+  btnPt.textContent = "PT";
+  btnPt.setAttribute("aria-label", "Mudar para Português");
+
+  const updateActiveState = (locale) => {
+    if (locale === "pt") {
+      btnPt.classList.add("active");
+      btnEn.classList.remove("active");
+    } else {
+      btnEn.classList.add("active");
+      btnPt.classList.remove("active");
+    }
+  };
+
+  btnEn.addEventListener("click", () => {
+    currentLocale.value = "en";
+    updateActiveState("en");
+  });
+
+  btnPt.addEventListener("click", () => {
+    currentLocale.value = "pt";
+    updateActiveState("pt");
+  });
+
+  updateActiveState(currentLocale.value);
+
+  container.appendChild(btnEn);
+  container.appendChild(btnPt);
+  document.body.appendChild(container);
+
+  setInterval(() => {
+    updateActiveState(currentLocale.value);
+  }, 500);
+}
+
 const i18n_SMdHjDdqIId1QK07LHAPEyr3HZfMyKcn2rAtnZisyJE = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.config.globalProperties.$t = (e) => {
+    const activeLocale = currentLocale.value;
     let paths = e.split(".");
-    let root = en;
+    let root = activeLocale === "pt" ? pt : en;
     let val = e;
     paths.forEach((element) => {
       if (root[element]) {
@@ -15889,6 +16139,14 @@ const i18n_SMdHjDdqIId1QK07LHAPEyr3HZfMyKcn2rAtnZisyJE = /* @__PURE__ */ defineN
     });
     return val;
   };
+
+  nuxtApp.hook("app:mounted", () => {
+    const userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    if (userLang.startsWith("pt")) {
+      currentLocale.value = "pt";
+    }
+    injectLanguageSwitcher();
+  });
 });
 function debounce(callback, delay) {
   let timer;
@@ -24169,15 +24427,37 @@ const _sfc_main$7 = {
       height: 0,
       open: false,
       ss_open: false,
-      links: [
-        ["Home", "#home"],
-        ["Horizons", "#horizons"],
-        ["Our Approach", "#from-visions-to-lasting-value"],
-        ["Team", "#people"],
-        //['Insights','#news'],
-        ["Contacts & Partnerships", "#contacts"]
-      ]
+      links: []
     };
+  },
+  computed: {
+    currentLocale() {
+      return currentLocale.value;
+    }
+  },
+  watch: {
+    currentLocale: {
+      handler(newLocale) {
+        if (newLocale === "pt") {
+          this.links = [
+            ["Home", "#home"],
+            ["Horizontes", "#horizons"],
+            ["Nossa Abordagem", "#from-visions-to-lasting-value"],
+            ["Time", "#people"],
+            ["Contatos & Parcerias", "#contacts"]
+          ];
+        } else {
+          this.links = [
+            ["Home", "#home"],
+            ["Horizons", "#horizons"],
+            ["Our Approach", "#from-visions-to-lasting-value"],
+            ["Team", "#people"],
+            ["Contacts & Partnerships", "#contacts"]
+          ];
+        }
+      },
+      immediate: true
+    }
   },
   mounted() {
     if (document) {
@@ -24286,13 +24566,13 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     createVNode(Transition, null, {
       default: withCtx(() => [
-        $data.ss_open == false ? (openBlock(), createElementBlock("p", _hoisted_1$2, [..._cache[7] || (_cache[7] = [
-          createTextVNode("Commit", -1),
+        $data.ss_open == false ? (openBlock(), createElementBlock("p", _hoisted_1$2, [
+          createTextVNode(toDisplayString(_ctx.$t("verticalWords.commit")), 1),
           createBaseVNode("br", null, null, -1),
-          createTextVNode(" Code", -1),
+          createTextVNode(" " + toDisplayString(_ctx.$t("verticalWords.code")), 1),
           createBaseVNode("br", null, null, -1),
-          createTextVNode(" Launch", -1)
-        ])], 512)) : createCommentVNode("", true)
+          createTextVNode(" " + toDisplayString(_ctx.$t("verticalWords.launch")), 1)
+        ])) : createCommentVNode("", true)
       ]),
       _: 1
     }),
@@ -27093,15 +27373,37 @@ const _sfc_main$4 = {
       height: 0,
       open: false,
       ss_open: false,
-      links: [
-        ["Home", "#home"],
-        ["Horizons", "#horizons"],
-        ["Our Approach", "#from-visions-to-lasting-value"],
-        ["Team", "#people"],
-        //['Insights','#news'],
-        ["Contacts & Partnerships", "#contacts"]
-      ]
+      links: []
     };
+  },
+  computed: {
+    currentLocale() {
+      return currentLocale.value;
+    }
+  },
+  watch: {
+    currentLocale: {
+      handler(newLocale) {
+        if (newLocale === "pt") {
+          this.links = [
+            ["Home", "#home"],
+            ["Horizontes", "#horizons"],
+            ["Nossa Abordagem", "#from-visions-to-lasting-value"],
+            ["Time", "#people"],
+            ["Contatos & Parcerias", "#contacts"]
+          ];
+        } else {
+          this.links = [
+            ["Home", "#home"],
+            ["Horizons", "#horizons"],
+            ["Our Approach", "#from-visions-to-lasting-value"],
+            ["Team", "#people"],
+            ["Contacts & Partnerships", "#contacts"]
+          ];
+        }
+      },
+      immediate: true
+    }
   },
   mounted() {
     if (document) {
@@ -27201,13 +27503,13 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     createVNode(Transition, null, {
       default: withCtx(() => [
-        $data.ss_open == false ? (openBlock(), createElementBlock("p", _hoisted_2, [..._cache[7] || (_cache[7] = [
-          createTextVNode("Commit", -1),
+        $data.ss_open == false ? (openBlock(), createElementBlock("p", _hoisted_2, [
+          createTextVNode(toDisplayString(_ctx.$t("verticalWords.commit")), 1),
           createBaseVNode("br", null, null, -1),
-          createTextVNode(" Code", -1),
+          createTextVNode(" " + toDisplayString(_ctx.$t("verticalWords.code")), 1),
           createBaseVNode("br", null, null, -1),
-          createTextVNode(" Launch", -1)
-        ])], 512)) : createCommentVNode("", true)
+          createTextVNode(" " + toDisplayString(_ctx.$t("verticalWords.launch")), 1)
+        ])) : createCommentVNode("", true)
       ]),
       _: 1
     }),
