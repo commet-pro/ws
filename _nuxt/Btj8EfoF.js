@@ -16661,10 +16661,11 @@ let touchState = {
 };
 let lastScroll = performance.now();
 let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
-  if (scroll.enabled == false) {
+  if (scroll.enabled == false || typeof delta !== "number" || isNaN(delta)) {
     return;
   }
   const elementsArray = Array.from(snap.elements.values());
+  if (elementsArray.length === 0) return;
   let currentviewportitem = elementsArray.reduce((mostProminent, e) => {
     const elementTop = e.rect.y + (e.snapOffset || 0);
     const elementBottom = elementTop + e.rect.height;
@@ -16678,7 +16679,9 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
     }
     return mostProminent;
   }, null);
+  if (!currentviewportitem) return;
   let currentviewportindex = elementsArray.findIndex((v) => v.element == currentviewportitem.element);
+  if (currentviewportindex === -1) return;
   if (currentviewportitem.element.snap != false || scroll.wasntSnapping) {
     if (performance.now() < lastScroll + 800) {
       return;
@@ -16724,12 +16727,12 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   if (snapping) {
     let nextviewportindex = Math.min(snap.elements.size - 1, Math.max(0, currentviewportindex + Math.sign(delta)));
     emitter.emit("scroll", Math.sign(delta));
-    if (snap.elements.get(nextviewportindex)) {
-      let scrollTo = snap.elements.get(nextviewportindex).rect.y + (snap.elements.get(nextviewportindex).element.snapOffset || 0);
-      if (snap.elements.get(nextviewportindex).element.snap == false && Math.sign(delta) == -1) {
-        scrollTo += snap.elements.get(nextviewportindex).rect.height - innerHeight / 1.9;
+    if (elementsArray[nextviewportindex]) {
+      let scrollTo = elementsArray[nextviewportindex].rect.y + (elementsArray[nextviewportindex].element.snapOffset || 0);
+      if (elementsArray[nextviewportindex].element.snap == false && Math.sign(delta) == -1) {
+        scrollTo += elementsArray[nextviewportindex].rect.height - innerHeight / 1.9;
       }
-      if (scroll.wasntSnapping || snap.elements.get(nextviewportindex).element.snap != false) {
+      if (scroll.wasntSnapping || elementsArray[nextviewportindex].element.snap != false) {
         scroll.target = scrollTo;
         scroll.target = Math.max(scroll.target, 0);
         scroll.isScrolling = true;
@@ -16738,7 +16741,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
         });
         scroll.wasntSnapping = true;
       } else {
-        scroll.wasntSnapping = scroll.wasntSnapping == false ? snap.elements.get(nextviewportindex).element.snap != false : true;
+        scroll.wasntSnapping = scroll.wasntSnapping == false ? elementsArray[nextviewportindex].element.snap != false : true;
       }
       if (isTouchEnd && scroll.velocity !== 0) {
         const inertia = Math.sign(scroll.velocity) * Math.pow(Math.abs(scroll.velocity), touchState.touchInertiaExponent);
@@ -16825,6 +16828,7 @@ const onTouchEnd = (event) => {
 wrapper.addEventListener("touchstart", onTouchStart, { passive: true });
 wrapper.addEventListener("touchmove", onTouchMove, { passive: true });
 wrapper.addEventListener("touchend", onTouchEnd, { passive: true });
+wrapper.addEventListener("touchcancel", onTouchEnd, { passive: true });
 let resizeTimeout;
 let preResizeState = null;
 const capturePreResizeState = () => {
