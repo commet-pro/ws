@@ -16664,7 +16664,11 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   if (scroll.enabled == false || typeof delta !== "number" || isNaN(delta)) {
     return;
   }
-  const elementsArray = Array.from(snap.elements.values());
+  const elementsArray = Array.from(snap.elements.values()).sort((a, b) => {
+    const yA = a.rect && typeof a.rect.y === "number" && !isNaN(a.rect.y) ? a.rect.y : 0;
+    const yB = b.rect && typeof b.rect.y === "number" && !isNaN(b.rect.y) ? b.rect.y : 0;
+    return yA - yB;
+  });
   if (elementsArray.length === 0) return;
   let currentviewportitem = elementsArray.reduce((mostProminent, e) => {
     const elementTop = e.rect.y + (e.snapOffset || 0);
