@@ -9336,20 +9336,7 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
             }, null, 8, _hoisted_19)
           ])
         ], 512),
-        createBaseVNode("div", _hoisted_20, [
-          createBaseVNode("div", _hoisted_21, [
-            _cache[3] || (_cache[3] = createBaseVNode("img", {
-              loading: "lazy",
-              src: _imports_3
-            }, null, -1)),
-            createBaseVNode("h3", _hoisted_22, toDisplayString(_ctx.$t("homeCardsScroll.team.giacomoGhirelli.name")), 1),
-            createBaseVNode("h3", _hoisted_23, toDisplayString(_ctx.$t("homeCardsScroll.team.giacomoGhirelli.role")), 1),
-            createBaseVNode("p", {
-              class: "ic-typ-p--small",
-              innerHTML: _ctx.$t("homeCardsScroll.team.giacomoGhirelli.bio")
-            }, null, 8, _hoisted_24)
-          ])
-        ], 512),
+
         createBaseVNode("div", _hoisted_25, [
           createBaseVNode("div", _hoisted_26, [
             _cache[4] || (_cache[4] = createBaseVNode("img", {
