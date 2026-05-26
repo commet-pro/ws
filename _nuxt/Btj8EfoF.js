@@ -16671,7 +16671,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   });
   if (elementsArray.length === 0) return;
   let currentviewportitem = elementsArray.reduce((mostProminent, e) => {
-    const elementTop = e.rect.y + (e.snapOffset || 0);
+    const elementTop = e.rect.y + (e.element.snapOffset || 0);
     const elementBottom = elementTop + e.rect.height;
     const viewportTop = scroll.target;
     const viewportBottom = scroll.target + window.innerHeight;
@@ -16686,7 +16686,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   if (!currentviewportitem) return;
   let currentviewportindex = elementsArray.findIndex((v) => v.element == currentviewportitem.element);
   if (currentviewportindex === -1) return;
-  if (currentviewportitem.element.snap != false || scroll.wasntSnapping) {
+  if (currentviewportitem.element.snap != false) {
     if (performance.now() < lastScroll + 800) {
       return;
     }
@@ -16710,7 +16710,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
     scroll.target = Math.max(scroll.target, 0);
     scroll.isScrolling = true;
     let newcurrentviewportitem = elementsArray.reduce((mostProminent, e) => {
-      const elementTop = e.rect.y + (e.snapOffset || 0);
+      const elementTop = e.rect.y + (e.element.snapOffset || 0);
       const elementBottom = elementTop + e.rect.height;
       const viewportTop = scroll.target;
       const viewportBottom = scroll.target + window.innerHeight;
@@ -16739,6 +16739,10 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
       if (scroll.wasntSnapping || elementsArray[nextviewportindex].element.snap != false) {
         scroll.target = scrollTo;
         scroll.target = Math.max(scroll.target, 0);
+        if (scroll.current > 2 * window.innerHeight && scroll.target < window.innerHeight) {
+          scroll.target = scroll.current;
+          return;
+        }
         scroll.isScrolling = true;
         emitter.emit("mostViewable", {
           lerpedTimecode: 1 + scroll.target / innerHeight
