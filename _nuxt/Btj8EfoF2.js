@@ -16709,21 +16709,9 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
     scroll.target += delta;
     scroll.target = Math.max(scroll.target, 0);
     scroll.isScrolling = true;
-    let newcurrentviewportitem = elementsArray.reduce((mostProminent, e) => {
-      const elementTop = e.rect.y + (e.element.snapOffset || 0);
-      const elementBottom = elementTop + e.rect.height;
-      const viewportTop = scroll.target;
-      const viewportBottom = scroll.target + window.innerHeight;
-      const visibleTop = Math.max(viewportTop, elementTop);
-      const visibleBottom = Math.min(viewportBottom, elementBottom);
-      const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-      if (!mostProminent || visibleHeight > mostProminent.visibleHeight) {
-        return { ...e, visibleHeight };
-      }
-      return mostProminent;
-    }, null);
-    let new_index = elementsArray.findIndex((v) => v.element == newcurrentviewportitem.element);
-    if (new_index != currentviewportindex) {
+    const currentSectionTop = elementsArray[currentviewportindex].rect.y + (elementsArray[currentviewportindex].element.snapOffset || 0);
+    const currentSectionBottom = currentSectionTop + elementsArray[currentviewportindex].rect.height;
+    if (scroll.target < currentSectionTop || scroll.target > currentSectionBottom - window.innerHeight * 0.3) {
       snapping = true;
     }
   }
