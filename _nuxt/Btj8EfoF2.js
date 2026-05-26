@@ -16817,6 +16817,7 @@ const onTouchMove = (event) => {
       touchState.directionLocked = touchState.totalDelta.y > touchState.totalDelta.x ? "vertical" : "horizontal";
     }
     if (touchState.directionLocked === "vertical") {
+      event.preventDefault();
       scrollHandler(deltaY, false);
     }
   }
@@ -16833,8 +16834,8 @@ const onTouchEnd = (event) => {
   touchState.potentialTapToStop = false;
   touchState.directionLocked = null;
 };
-wrapper.addEventListener("touchstart", onTouchStart, { passive: true });
-wrapper.addEventListener("touchmove", onTouchMove, { passive: true });
+wrapper.addEventListener("touchstart", onTouchStart, { passive: false });
+wrapper.addEventListener("touchmove", onTouchMove, { passive: false });
 wrapper.addEventListener("touchend", onTouchEnd, { passive: true });
 wrapper.addEventListener("touchcancel", onTouchEnd, { passive: true });
 let resizeTimeout;
