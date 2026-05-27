@@ -16727,29 +16727,31 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
         break;
       }
     }
-    if (delta < 0 && scroll.target < zoneTop) {
-      const prevIndex = zoneStartIndex - 1;
-      if (prevIndex >= 0) {
-        scroll.target = elementsArray[prevIndex].rect.y + (elementsArray[prevIndex].element.snapOffset || 0);
-        scroll.snapping = true;
-        scroll.isScrolling = true;
-        emitter.emit("scroll", -1);
-        emitter.emit("mostViewable", {
-          lerpedTimecode: 1 + scroll.target / innerHeight
-        });
-      } else {
-        scroll.target = 0;
-      }
-    } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.9) {
-      const nextIndex = zoneEndIndex + 1;
-      if (nextIndex < elementsArray.length) {
-        scroll.target = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
-        scroll.snapping = true;
-        scroll.isScrolling = true;
-        emitter.emit("scroll", 1);
-        emitter.emit("mostViewable", {
-          lerpedTimecode: 1 + scroll.target / innerHeight
-        });
+    if (false) {
+      if (delta < 0 && scroll.target < zoneTop) {
+        const prevIndex = zoneStartIndex - 1;
+        if (prevIndex >= 0) {
+          scroll.target = elementsArray[prevIndex].rect.y + (elementsArray[prevIndex].element.snapOffset || 0);
+          scroll.snapping = true;
+          scroll.isScrolling = true;
+          emitter.emit("scroll", -1);
+          emitter.emit("mostViewable", {
+            lerpedTimecode: 1 + scroll.target / innerHeight
+          });
+        } else {
+          scroll.target = 0;
+        }
+      } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.9) {
+        const nextIndex = zoneEndIndex + 1;
+        if (nextIndex < elementsArray.length) {
+          scroll.target = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
+          scroll.snapping = true;
+          scroll.isScrolling = true;
+          emitter.emit("scroll", 1);
+          emitter.emit("mostViewable", {
+            lerpedTimecode: 1 + scroll.target / innerHeight
+          });
+        }
       }
     }
     emitter.emit("currenTime", {
