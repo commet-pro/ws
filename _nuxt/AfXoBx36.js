@@ -9140,7 +9140,9 @@ const _imports_13 = publicAssetsURL("/partners/Giuseppe_Scarlata.png");
 const _sfc_main$4 = {
   mounted() {
     this.$el.snap = false;
-    this.$snap.addElement(this.$el);
+    if (window.innerWidth > 800) {
+      this.$snap.addElement(this.$el);
+    }
   }
 };
 const _hoisted_1$2 = { id: "people" };
