@@ -16686,22 +16686,18 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   if (!currentviewportitem) return;
   let currentviewportindex = elementsArray.findIndex((v) => v.element == currentviewportitem.element);
   if (currentviewportindex === -1) return;
-  if (currentviewportitem.element.snap != false) {
+  const inFreeScroll = currentviewportitem.element.snap == false;
+  if (!inFreeScroll) {
     if (performance.now() < lastScroll + 800) {
       return;
     }
-  }
-  if (currentviewportitem.element.snap != false && isIntentional == false) {
-    return;
+    if (isIntentional == false) {
+      return;
+    }
   }
   lastScroll = performance.now();
   delta = Math.min(200, Math.abs(delta)) * Math.sign(delta);
-  let snapping = true;
-  if (currentviewportitem.element.snap == false) {
-    snapping = false;
-  }
-  if (!snapping) {
-    scroll.wasntSnapping = false;
+  if (inFreeScroll) {
     delta /= innerWidth > 1e3 ? 2 : 1;
     if (isTouchEnd && touchState.isTouch) {
       delta *= touchState.touchInertiaMultiplier;
@@ -16709,39 +16705,81 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
     scroll.target += delta;
     scroll.target = Math.max(scroll.target, 0);
     scroll.isScrolling = true;
-    const currentSectionTop = elementsArray[currentviewportindex].rect.y + (elementsArray[currentviewportindex].element.snapOffset || 0);
-    const currentSectionBottom = currentSectionTop + elementsArray[currentviewportindex].rect.height;
-    if (scroll.target < currentSectionTop || scroll.target > currentSectionBottom - window.innerHeight * 0.3) {
-      snapping = true;
-    }
-  }
-  scroll.snapping = snapping;
-  if (snapping) {
-    let nextviewportindex = Math.min(snap.elements.size - 1, Math.max(0, currentviewportindex + Math.sign(delta)));
-    emitter.emit("scroll", Math.sign(delta));
-    if (elementsArray[nextviewportindex]) {
-      let scrollTo = elementsArray[nextviewportindex].rect.y + (elementsArray[nextviewportindex].element.snapOffset || 0);
-      if (elementsArray[nextviewportindex].element.snap == false && Math.sign(delta) == -1) {
-        scrollTo += elementsArray[nextviewportindex].rect.height - innerHeight / 1.9;
+    scroll.snapping = false;
+    let zoneTop = elementsArray[currentviewportindex].rect.y + (elementsArray[currentviewportindex].element.snapOffset || 0);
+    let zoneBottom = zoneTop + elementsArray[currentviewportindex].rect.height;
+    let zoneStartIndex = currentviewportindex;
+    let zoneEndIndex = currentviewportindex;
+    for (let i = currentviewportindex - 1; i >= 0; i--) {
+      if (elementsArray[i].element.snap == false) {
+        zoneTop = elementsArray[i].rect.y + (elementsArray[i].element.snapOffset || 0);
+        zoneStartIndex = i;
+      } else {
+        break;
       }
-      if (scroll.wasntSnapping || elementsArray[nextviewportindex].element.snap != false) {
-        scroll.target = scrollTo;
-        scroll.target = Math.max(scroll.target, 0);
-        if (scroll.current > 2 * window.innerHeight && scroll.target < window.innerHeight) {
-          scroll.target = scroll.current;
-          return;
-        }
+    }
+    for (let i = currentviewportindex + 1; i < elementsArray.length; i++) {
+      if (elementsArray[i].element.snap == false) {
+        const eTop = elementsArray[i].rect.y + (elementsArray[i].element.snapOffset || 0);
+        zoneBottom = eTop + elementsArray[i].rect.height;
+        zoneEndIndex = i;
+      } else {
+        break;
+      }
+    }
+    if (delta < 0 && scroll.target < zoneTop) {
+      const prevIndex = zoneStartIndex - 1;
+      if (prevIndex >= 0) {
+        scroll.target = elementsArray[prevIndex].rect.y + (elementsArray[prevIndex].element.snapOffset || 0);
+        scroll.snapping = true;
         scroll.isScrolling = true;
+        emitter.emit("scroll", -1);
         emitter.emit("mostViewable", {
           lerpedTimecode: 1 + scroll.target / innerHeight
         });
-        scroll.wasntSnapping = true;
       } else {
-        scroll.wasntSnapping = scroll.wasntSnapping == false ? elementsArray[nextviewportindex].element.snap != false : true;
+        scroll.target = 0;
       }
-      if (isTouchEnd && scroll.velocity !== 0) {
-        const inertia = Math.sign(scroll.velocity) * Math.pow(Math.abs(scroll.velocity), touchState.touchInertiaExponent);
+    } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.3) {
+      const nextIndex = zoneEndIndex + 1;
+      if (nextIndex < elementsArray.length) {
+        scroll.target = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
+        scroll.snapping = true;
+        scroll.isScrolling = true;
+        emitter.emit("scroll", 1);
+        emitter.emit("mostViewable", {
+          lerpedTimecode: 1 + scroll.target / innerHeight
+        });
       }
+    }
+    emitter.emit("currenTime", {
+      lerpedTimecode: 1 + scroll.target / innerHeight
+    });
+  } else {
+    let nextviewportindex = Math.min(elementsArray.length - 1, Math.max(0, currentviewportindex + Math.sign(delta)));
+    emitter.emit("scroll", Math.sign(delta));
+    scroll.snapping = true;
+    if (elementsArray[nextviewportindex]) {
+      let scrollTo = elementsArray[nextviewportindex].rect.y + (elementsArray[nextviewportindex].element.snapOffset || 0);
+      if (elementsArray[nextviewportindex].element.snap == false && Math.sign(delta) == -1) {
+        let freeZoneBottom = scrollTo + elementsArray[nextviewportindex].rect.height;
+        for (let i = nextviewportindex + 1; i < elementsArray.length; i++) {
+          if (elementsArray[i].element.snap == false) {
+            freeZoneBottom = elementsArray[i].rect.y + (elementsArray[i].element.snapOffset || 0) + elementsArray[i].rect.height;
+          } else {
+            break;
+          }
+        }
+        scrollTo = freeZoneBottom - innerHeight;
+      }
+      scroll.target = Math.max(scrollTo, 0);
+      scroll.isScrolling = true;
+      emitter.emit("mostViewable", {
+        lerpedTimecode: 1 + scroll.target / innerHeight
+      });
+    }
+    if (isTouchEnd && scroll.velocity !== 0) {
+      const inertia = Math.sign(scroll.velocity) * Math.pow(Math.abs(scroll.velocity), touchState.touchInertiaExponent);
     }
   }
 };
