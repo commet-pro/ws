@@ -16740,7 +16740,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
       } else {
         scroll.target = 0;
       }
-    } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.3) {
+    } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.9) {
       const nextIndex = zoneEndIndex + 1;
       if (nextIndex < elementsArray.length) {
         scroll.target = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
@@ -16763,6 +16763,14 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
       let scrollTo = elementsArray[nextviewportindex].rect.y + (elementsArray[nextviewportindex].element.snapOffset || 0);
       if (elementsArray[nextviewportindex].element.snap == false && Math.sign(delta) == -1) {
         let freeZoneBottom = scrollTo + elementsArray[nextviewportindex].rect.height;
+        let freeZoneTop = scrollTo;
+        for (let i = nextviewportindex - 1; i >= 0; i--) {
+          if (elementsArray[i].element.snap == false) {
+            freeZoneTop = elementsArray[i].rect.y + (elementsArray[i].element.snapOffset || 0);
+          } else {
+            break;
+          }
+        }
         for (let i = nextviewportindex + 1; i < elementsArray.length; i++) {
           if (elementsArray[i].element.snap == false) {
             freeZoneBottom = elementsArray[i].rect.y + (elementsArray[i].element.snapOffset || 0) + elementsArray[i].rect.height;
@@ -16770,7 +16778,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
             break;
           }
         }
-        scrollTo = freeZoneBottom - innerHeight;
+        scrollTo = Math.max(freeZoneBottom - innerHeight, freeZoneTop);
       }
       scroll.target = Math.max(scrollTo, 0);
       scroll.isScrolling = true;
@@ -16933,6 +16941,8 @@ const lenis_client_4LxE3teLPytGU5rsn7QUsqpmbs5IWA12TrrawL01aN0 = /* @__PURE__ */
     if (e) {
       scroll.target = scroll.current + e.getBoundingClientRect().top + (e.snapOffset || 0);
       scroll.target = Math.max(scroll.target, 0);
+      scroll.snapping = true;
+      scroll.isScrolling = true;
       emitter.emit("currenTime", {
         lerpedTimecode: 1 + scroll.target / innerHeight
       });
