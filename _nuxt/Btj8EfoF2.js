@@ -16691,7 +16691,7 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
   if (!currentviewportitem) return;
   let currentviewportindex = elementsArray.findIndex((v) => v.element == currentviewportitem.element);
   if (currentviewportindex === -1) return;
-  const inFreeScroll = window.innerWidth <= 800 || currentviewportitem.element.snap == false;
+  const inFreeScroll = currentviewportitem.element.snap == false;
   if (!inFreeScroll) {
     if (performance.now() < lastScroll + 800) {
       return;

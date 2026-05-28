@@ -9139,10 +9139,15 @@ publicAssetsURL("/partners/GucluBatkin.png");
 const _imports_13 = publicAssetsURL("/partners/Giuseppe_Scarlata.png");
 const _sfc_main$4 = {
   mounted() {
-    this.$el.snap = false;
-    if (window.innerWidth > 800) {
-      this.$snap.addElement(this.$el);
-    }
+    this.$el.snapFN = () => {
+      this.$el.snap = window.innerWidth > 800;
+    };
+    this.$el.snapFN();
+    window.addEventListener("resize", this.$el.snapFN);
+    this.$snap.addElement(this.$el);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.$el.snapFN);
   }
 };
 const _hoisted_1$2 = { id: "people" };
