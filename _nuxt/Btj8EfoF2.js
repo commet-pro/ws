@@ -16275,9 +16275,14 @@ class SnapElement {
     this.setRect({ top, left });
   };
   onResize = ([entry2]) => {
-    if (!entry2?.borderBoxSize[0]) return;
-    const width = entry2.borderBoxSize[0].inlineSize;
-    const height = entry2.borderBoxSize[0].blockSize;
+    let width = 0, height = 0;
+    if (entry2 && entry2.borderBoxSize && entry2.borderBoxSize[0]) {
+      width = entry2.borderBoxSize[0].inlineSize;
+      height = entry2.borderBoxSize[0].blockSize;
+    } else if (entry2 && entry2.contentRect) {
+      width = entry2.contentRect.width;
+      height = entry2.contentRect.height;
+    }
     this.setRect({ width, height });
   };
 }
@@ -16730,7 +16735,8 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
     if (delta < 0 && scroll.target < zoneTop) {
       const prevIndex = zoneStartIndex - 1;
       if (prevIndex >= 0) {
-        scroll.target = elementsArray[prevIndex].rect.y + (elementsArray[prevIndex].element.snapOffset || 0);
+        let t = elementsArray[prevIndex].rect.y + (elementsArray[prevIndex].element.snapOffset || 0);
+        if (!isNaN(t)) scroll.target = t;
         scroll.snapping = true;
         scroll.isScrolling = true;
         emitter.emit("scroll", -1);
@@ -16738,12 +16744,13 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
           lerpedTimecode: 1 + scroll.target / innerHeight
         });
       } else {
-        scroll.target = 0;
+        scroll.target = Math.max(0, zoneTop);
       }
     } else if (delta > 0 && scroll.target > zoneBottom - window.innerHeight * 0.9) {
       const nextIndex = zoneEndIndex + 1;
       if (nextIndex < elementsArray.length) {
-        scroll.target = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
+        let t = elementsArray[nextIndex].rect.y + (elementsArray[nextIndex].element.snapOffset || 0);
+        if (!isNaN(t)) scroll.target = t;
         scroll.snapping = true;
         scroll.isScrolling = true;
         emitter.emit("scroll", 1);
@@ -16780,7 +16787,9 @@ let scrollHandler = (delta, isTouchEnd = false, isIntentional = true) => {
         }
         scrollTo = Math.max(freeZoneBottom - innerHeight, freeZoneTop);
       }
-      scroll.target = Math.max(scrollTo, 0);
+      if (!isNaN(scrollTo)) {
+        scroll.target = Math.max(scrollTo, 0);
+      }
       scroll.isScrolling = true;
       emitter.emit("mostViewable", {
         lerpedTimecode: 1 + scroll.target / innerHeight
