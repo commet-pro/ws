@@ -16403,16 +16403,29 @@ class Snap {
   onSnap = () => {
     let { scroll: scroll2, isHorizontal } = this.lenis;
     scroll2 = Math.ceil(this.lenis.scroll);
+    for (const item of this.elements.values()) {
+      if (item.element.isTall) {
+        const threshold = 1;
+        const topBound = (item.element.snapOffset || 0) + item.rect.top;
+        const bottomBound = (item.element.snapOffset || 0) + item.rect.top + item.rect.height - this.viewport.height;
+        if (scroll2 > topBound + threshold && scroll2 < bottomBound - threshold) {
+          console.log("Snap ignored: tall section");
+          return;
+        }
+      }
+    }
     let snaps = [...this.snaps.values()];
-    this.elements.forEach(({ rect, align }) => {
+    this.elements.forEach(({ rect, align, element }) => {
+      if (element.snap === false) return;
       let value;
+      const snapOffset = element.snapOffset || 0;
       align.forEach((align2) => {
         if (align2 === "start") {
-          value = rect.top;
+          value = rect.top + snapOffset;
         } else if (align2 === "center") {
-          value = isHorizontal ? rect.left + rect.width / 2 - this.viewport.width / 2 : rect.top + rect.height / 2 - this.viewport.height / 2;
+          value = isHorizontal ? rect.left + rect.width / 2 - this.viewport.width / 2 : rect.top + snapOffset + rect.height / 2 - this.viewport.height / 2;
         } else if (align2 === "end") {
-          value = isHorizontal ? rect.left + rect.width - this.viewport.width : rect.top + rect.height - this.viewport.height;
+          value = isHorizontal ? rect.left + rect.width - this.viewport.width : rect.top + snapOffset + rect.height - this.viewport.height;
         }
         if (typeof value === "number") {
           snaps.push({ value: Math.ceil(value), userData: {} });
