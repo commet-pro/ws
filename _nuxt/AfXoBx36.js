@@ -9140,9 +9140,33 @@ const _imports_13 = publicAssetsURL("/partners/Giuseppe_Scarlata.png");
 const _sfc_main$4 = {
   mounted() {
     this.$el.snapFN = () => {
-      this.$el.snap = window.innerWidth > 800;
+      const section = this.$el.querySelector(".ic-fh-section") || this.$el;
+      section.style.height = "auto";
+      section.style.minHeight = "0px";
+      this.$el.style.height = "auto";
+      
+      // Forçamos o navegador a recalcular o layout antes de medir
+      const height = section.offsetHeight;
+      const t = height > window.innerHeight + 50; 
+      
+      this.$el.isTall = t;
+      this.$el.snap = window.innerWidth > 800 && !t;
+      
+      if (this.$el.snap && !t) {
+        section.style.height = "100dvh";
+        section.style.minHeight = "100dvh";
+        section.style.overflow = "hidden";
+        this.$el.style.height = "100dvh";
+      } else {
+        section.style.height = "auto";
+        section.style.minHeight = "130dvh"; // Aumentado para garantir área de scroll
+        section.style.paddingBottom = "200px"; // Mais espaço no final
+        section.style.overflow = "visible";
+        this.$el.style.height = "auto";
+      }
     };
     this.$el.snapFN();
+    this.$el.snapOffset = -150;
     window.addEventListener("resize", this.$el.snapFN);
     this.$snap.addElement(this.$el);
   },
