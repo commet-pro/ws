@@ -71,6 +71,26 @@ const _sfc_main$g = {
         window.__commetBgSound = __commetBgSound;
         const __commetMuted = localStorage.getItem("commet_audio_muted") === "true";
         __commetBgSound.mute(__commetMuted);
+        // Browsers block audible autoplay until the user interacts, and Howler only
+        // attempts its native unlock once. Resume the AudioContext and (re)start the
+        // loop on the first gesture, otherwise the track stays silent in production.
+        let __commetResumed = false;
+        const __commetEvents = ["pointerdown", "touchstart", "keydown", "wheel", "click"];
+        const __commetResume = () => {
+          if (__commetResumed) return;
+          try {
+            if (window.Howler && window.Howler.ctx && window.Howler.ctx.state !== "running" && typeof window.Howler.ctx.resume === "function") {
+              window.Howler.ctx.resume();
+            }
+            if (!__commetBgSound.playing()) {
+              __commetBgSound.play();
+            }
+            __commetResumed = true;
+            __commetEvents.forEach((ev) => window.removeEventListener(ev, __commetResume));
+          } catch (e) {
+          }
+        };
+        __commetEvents.forEach((ev) => window.addEventListener(ev, __commetResume, { passive: true }));
         window.dispatchEvent(new CustomEvent("commet-audio-ready", { detail: { muted: __commetMuted } }));
       } catch (e) {
       }
