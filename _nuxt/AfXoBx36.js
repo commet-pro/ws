@@ -61,12 +61,19 @@ const _sfc_main$g = {
           window.timeref.value = e.lerpedTimecode;
         }
       });
-      new howlerExports.Howl({
+      const __commetBgSound = new howlerExports.Howl({
         src: "/bg_commet.ogg",
         volume: 0.3,
         loop: true,
         autoplay: true
       });
+      try {
+        window.__commetBgSound = __commetBgSound;
+        const __commetMuted = localStorage.getItem("commet_audio_muted") === "true";
+        __commetBgSound.mute(__commetMuted);
+        window.dispatchEvent(new CustomEvent("commet-audio-ready", { detail: { muted: __commetMuted } }));
+      } catch (e) {
+      }
     }
   }
 };
@@ -210,7 +217,7 @@ function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("a", {
             onClick: _cache[0] || (_cache[0] = withModifiers(($event) => $options.scrollTo("#horizons"), ["prevent"])),
             "data-disappear-timecode": $options.computedTimecode,
-            href: "/",
+            href: "#horizons",
             class: "ic-btn"
           }, toDisplayString(_ctx.$t("homeHeader.button")), 9, _hoisted_5$9)
         ])
@@ -9036,7 +9043,7 @@ const _sfc_main$5 = {
     });
   }
 };
-const _hoisted_1$3 = { id: "from-visions-to-lasting-value" };
+const _hoisted_1$3 = { id: "who-we-help" };
 const _hoisted_2$3 = { class: "ic-fh-section" };
 const _hoisted_3$3 = ["innerHTML"];
 const _hoisted_4$3 = { class: "ic-typ-p" };
@@ -9330,7 +9337,8 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("div", _hoisted_6$2, [
             _cache[0] || (_cache[0] = createBaseVNode("img", {
               loading: "lazy",
-              src: _imports_0
+              src: _imports_0,
+              alt: _ctx.$t("homeCardsScroll.team.filippoGhirelli.name")
             }, null, -1)),
             createBaseVNode("h3", _hoisted_7$2, toDisplayString(_ctx.$t("homeCardsScroll.team.filippoGhirelli.name")), 1),
             createBaseVNode("h3", _hoisted_8$2, toDisplayString(_ctx.$t("homeCardsScroll.team.filippoGhirelli.role")), 1),
@@ -9344,7 +9352,8 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("div", _hoisted_11$1, [
             _cache[1] || (_cache[1] = createBaseVNode("img", {
               loading: "lazy",
-              src: _imports_1
+              src: _imports_1,
+              alt: _ctx.$t("homeCardsScroll.team.claudioBracci.name")
             }, null, -1)),
             createBaseVNode("h3", _hoisted_12$1, toDisplayString(_ctx.$t("homeCardsScroll.team.claudioBracci.name")), 1),
             createBaseVNode("h3", _hoisted_13$1, toDisplayString(_ctx.$t("homeCardsScroll.team.claudioBracci.role")), 1),
@@ -9358,7 +9367,8 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("div", _hoisted_16$1, [
             _cache[2] || (_cache[2] = createBaseVNode("img", {
               loading: "lazy",
-              src: _imports_2
+              src: _imports_2,
+              alt: _ctx.$t("homeCardsScroll.team.andreaCaturelli.name")
             }, null, -1)),
             createBaseVNode("h3", _hoisted_17$1, toDisplayString(_ctx.$t("homeCardsScroll.team.andreaCaturelli.name")), 1),
             createBaseVNode("h3", _hoisted_18, toDisplayString(_ctx.$t("homeCardsScroll.team.andreaCaturelli.role")), 1),
@@ -9373,7 +9383,8 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
           createBaseVNode("div", _hoisted_26, [
             _cache[4] || (_cache[4] = createBaseVNode("img", {
               loading: "lazy",
-              src: _imports_4
+              src: _imports_4,
+              alt: _ctx.$t("homeCardsScroll.team.fulvioMaccarone.name")
             }, null, -1)),
             createBaseVNode("h3", _hoisted_27, toDisplayString(_ctx.$t("homeCardsScroll.team.fulvioMaccarone.name")), 1),
             createBaseVNode("h3", _hoisted_28, toDisplayString(_ctx.$t("homeCardsScroll.team.fulvioMaccarone.role")), 1),
@@ -9607,6 +9618,7 @@ const _hoisted_4 = { class: "row" };
 const _hoisted_5 = ["innerHTML"];
 const _hoisted_6 = {
   target: "_blank",
+  rel: "noopener noreferrer",
   href: "https://www.linkedin.com/company/commet-pro/",
   class: "ic-btn no-outline"
 };
