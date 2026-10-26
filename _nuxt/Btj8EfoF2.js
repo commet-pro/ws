@@ -15852,12 +15852,12 @@ const homeAirplane = { "title": "Software <br>& Platforms", "description": "We d
 const homeWindmill = { "title": "Growth <br>& Performance", "description": "We create the digital assets that make companies visible, relevant and measurable: campaigns, creatives, landing pages, SEO, social media and conversion flows.", "button": "Discover More", "expandedTitle": "Growth & Performance", "expandedDescription": "We create the digital assets that make companies visible, relevant and measurable: campaigns, creatives, landing pages, SEO, social media and conversion flows.<br><br>Our approach combines creative direction with deep analytical discipline to build conversion pipelines that perform. We manage budgets across channels, craft compelling visual narratives, and optimize every pixel of your digital footprint to drive sustainable B2B customer acquisition." };
 const homeRocket = { "title": "AI <br>& Automation", "description": "We apply artificial intelligence to automate workflows, generate content, support sales, analyze data and create agents that reduce manual work.", "button": "Discover More", "expandedTitle": "AI & Automation", "expandedDescription": "We apply artificial intelligence to automate workflows, generate content, support sales, analyze data and create agents that reduce manual work.<br><br>By integrating state-of-the-art LLMs, custom training databases, and intelligent workflow routers, we help businesses unlock new levels of efficiency. Our solutions range from simple automated reply flows and custom data extraction scrapers to complex, autonomous AI agents acting as tireless members of your operations squad." };
 const homeDatacenter = { "title": "Web <br>& Digital Presence", "description": "We build websites, landing pages and digital experiences that communicate value, load fast and convert better across devices.", "button": "Discover More", "expandedTitle": "Web & Digital Presence", "expandedDescription": "We build websites, landing pages and digital experiences that communicate value, load fast and convert better across devices.<br><br>A modern website must be fast, secure, beautiful, and fully optimized for conversion. We combine clean semantic HTML/CSS layouts, high-fidelity micro-interactions, flawless SEO hygiene, and ultra-fast hosting configurations to create experiences that wow visitors and convert them into customers." };
-const homeFVTV = { "title": "From Spark to Impact", "description": "A four-step discipline to transform ideas into digital systems that perform.<br>Commet's method ensures rapid, reliable delivery without sacrificing creative quality or operational stability.", "define": { "title": "Discover", "description": "We understand your B2B model, align on growth goals, identify friction points, and lay down the technical/creative path." }, "develop": { "title": "Design", "description": "We architect high-fidelity UX prototypes, design modern visual systems, and establish cohesive branding frameworks." }, "derisk": { "title": "Build", "description": "We write clean code, integrate robust API pipelines, configure AI agents, and build high-performance digital products." }, "deliver": { "title": "Launch", "description": "We deploy with absolute confidence, run conversion tracking audits, optimize technical SEO, and trigger active growth funnels." } };
-const homeHeroes = { "title": "We make your business<br>the signal", "description": "The work is ours. The momentum is yours. We help B2B teams turn digital ambition into working systems.", "governments": { "title": "Founders", "description": "We act as your on-demand technology and product squad - designing MVPs, scaling architectures, and turning visions into venture-backed realities." }, "investors": { "title": "Marketing Teams", "description": "We build conversion-focused landing pages, high-performance SEO pipelines, and creative assets that drive higher ROI for your media spend." }, "localCommunities": { "title": "Operations", "description": "We deploy smart workflows, automated scraping systems, and AI-powered agents to eliminate manual tasks and accelerate team execution." } };
-const homeCardsScroll = {"title": "Meet the Squad", "team": {"filippoGhirelli": {"name": "Rafael França", "role": "Co-Founder & Chief Product Officer (CPDO)", "bio": "Co-Founder & Chief Product Officer. A digital experience visionary specializing in transforming complex brand strategies into premium, high-converting digital products. Leading UI/UX design, design systems, and product strategy, Rafael ensures every digital touchpoint delivers cinematic beauty and seamless user engagement."}, "claudioBracci": {"name": "Flavio Henrique", "role": "Co-Founder & Chief Technology Officer (CTO)", "bio": "Co-Founder & Chief Technology Officer. A veteran software architect and systems engineer dedicated to building high-performance, secure, and scalable digital infrastructure. Expert in WebGL, custom platforms, Cloud solutions, and AI integrations, Flavio leads Commet's engineering squad to turn complex ideas into lightning-fast reality."}, "andreaCaturelli": {"name": "On-Demand Specialist", "role": "Web Development & Technical SEO Specialist", "bio": "Frontend developer and technical SEO wizard. Bridging the gap between aesthetic excellence and search engine prominence, ensuring semantic markup, clean architectures, and flawless SEO configurations that rank and convert."}, "fulvioMaccarone": {"name": "On-Demand Specialist", "role": "Growth & Performance Marketing Specialist", "bio": "Performance marketer and growth strategist. Designing B2B funnel campaigns, programmatic media setups, and attribution tracking to scale customer acquisition, ensuring every byte of technology translates directly into business momentum."}}};
+const homeFVTV = { "title": "From Spark to Impact", "description": "A four-step discipline to transform ideas into digital systems that perform.<br>Commet's method aligns scope, priorities and validation without sacrificing creative quality or operational stability.", "define": { "title": "Discover", "description": "We understand your B2B model, align on growth goals, identify friction points, and lay down the technical/creative path." }, "develop": { "title": "Design", "description": "We architect high-fidelity UX prototypes, design modern visual systems, and establish cohesive branding frameworks." }, "derisk": { "title": "Build", "description": "We write clean code, integrate robust API pipelines, configure AI agents, and build high-performance digital products." }, "deliver": { "title": "Launch", "description": "We launch with validation and monitoring, run conversion tracking audits, optimize technical SEO, and trigger active growth funnels." } };
+const homeHeroes = { "title": "We make your business<br>the signal", "description": "The work is ours. The momentum is yours. We help B2B teams turn digital ambition into working systems.", "governments": { "title": "Founders", "description": "We act as your on-demand technology and product squad - designing MVPs, scaling architectures, and validating ideas and building products ready for real use." }, "investors": { "title": "Marketing Teams", "description": "We build conversion-focused landing pages, high-performance SEO pipelines, and creative assets that drive higher ROI for your media spend." }, "localCommunities": { "title": "Operations", "description": "We deploy smart workflows, automated scraping systems, and AI-powered agents to eliminate manual tasks and accelerate team execution." } };
+const homeCardsScroll = {"title":"Strategy and execution, up close.","label":"Rafael França · Founder","intro":"I founded Commet to connect brand strategy, technology and growth.","description":"I work directly with each client to define priorities and connect design, development, automation and performance around the project’s needs. From the first conversation to delivery, you know who is leading the work.","cta":"Let’s talk about your project"};
 const homeNews = { "title": "News & Insights" };
 const homeLBTFT = { "title": "Ready to create impact?", "description": "Every company has a next version. Commet helps build yours.<br>Reach out to Commet® to explore how we can collaborate and build your technology, AI, and performance pipelines.", "button": "Talk to Commet", "footer": { "copyright": "© 2026 Commet.pro. All rights reserved.<br>Engineering Intelligent Growth.", "linkedin": "Join us on LinkedIn", "privacyPolicy": "Privacy Policy", "cookiePolicy": "Cookie Policy" } };
-const contactForm = { "title": "Talk to Commet", "description": "Reach out to explore how we can collaborate and build your technology, AI, and performance pipelines.", "emailPlaceholder": "Email", "firstNamePlaceholder": "First Name", "lastNamePlaceholder": "Last Name", "messagePlaceholder": "Message", "submitButton": "Send Message", "confirmationTitle": "Opening WhatsApp...", "confirmationMessage": "We are redirecting you to our WhatsApp Business...", "closeButton": "Close" };
+const contactForm = { "title": "Talk to Commet", "description": "Reach out to explore how we can collaborate and build your technology, AI, and performance pipelines.", "emailPlaceholder": "Email", "firstNamePlaceholder": "First Name", "lastNamePlaceholder": "Last Name", "messagePlaceholder": "Message", "submitButton": "Send Message", "confirmationTitle": "Complete your message in WhatsApp", "confirmationMessage": "Your message is ready. Press send in WhatsApp to complete your inquiry.", "closeButton": "Close" };
 const infracore = { "title": "The Commet Core", "description": "A compact operating system for intelligent growth: strategy, AI, design, code, content and performance moving as one.<br>Commet Core connects discovery, creative direction, product thinking, software engineering and data optimization into one execution layer. It is how a small team delivers with the speed of a squad and the precision of a product company." };
 const verticalWords = { "commit": "Commit", "code": "Code", "launch": "Launch" };
 const en = {
@@ -15921,8 +15921,8 @@ const pt = {
     "expandedDescription": "Construímos sites, landing pages e experiências digitais que comunicam valor, carregam rápido e convertem melhor em qualquer dispositivo.<br><br>Um site moderno precisa ser rápido, seguro, esteticamente impecável e totalmente otimizado para conversão. Combinamos layouts limpos e semânticos em HTML/CSS, microinterações de alta fidelidade, higiene de SEO impecável e configurações de hospedagem ultrarrápidas para criar experiências que impressionam os visitantes e os transformam em clientes."
   },
   homeFVTV: {
-    "title": "De Spark ao Impacto",
-    "description": "Uma disciplina de quatro etapas para transformar ideias em sistemas digitais de alta performance.<br>O método da Commet garante uma entrega rápida e confiável, sem abrir mão da qualidade criativa ou da estabilidade operacional.",
+    "title": "Da ideia à operação",
+    "description": "Uma disciplina de quatro etapas para transformar ideias em sistemas digitais de alta performance.<br>O método da Commet organiza escopo, prioridades e validação, sem abrir mão da qualidade criativa ou da estabilidade operacional.",
     "define": {
       "title": "Discover",
       "description": "Entendemos seu modelo B2B, alinhamos metas de crescimento, identificamos pontos de atrito e definimos o caminho técnico e criativo."
@@ -15937,7 +15937,7 @@ const pt = {
     },
     "deliver": {
       "title": "Launch",
-      "description": "Fazemos o deploy com segurança absoluta, realizamos auditorias de rastreamento de conversão, otimizamos o SEO técnico e ativamos funis de crescimento."
+      "description": "Publicamos com validação e acompanhamento, realizamos auditorias de rastreamento de conversão, otimizamos o SEO técnico e ativamos funis de crescimento."
     }
   },
   homeHeroes: {
@@ -15945,7 +15945,7 @@ const pt = {
     "description": "O trabalho é nosso. O impulso é seu. Ajudamos times B2B a transformar ambição digital em sistemas que funcionam.",
     "governments": {
       "title": "Founders",
-      "description": "Atuamos como seu squad de tecnologia e produto sob demanda — projetando MVPs, escalando arquiteturas e transformando visões em realidade pronta para investimento."
+      "description": "Atuamos como seu squad de tecnologia e produto sob demanda — projetando MVPs, escalando arquiteturas e validando ideias e construindo produtos prontos para uso real."
     },
     "investors": {
       "title": "Marketing Teams",
@@ -15956,31 +15956,7 @@ const pt = {
       "description": "Implementamos fluxos de trabalho inteligentes, sistemas de extração de dados automatizados e agentes de IA para eliminar tarefas manuais e acelerar a execução do time."
     }
   },
-  homeCardsScroll: {
-    "title": "Conheça o Squad",
-    "team": {
-      "filippoGhirelli": {
-        "name": "Rafael França",
-        "role": "Co-Founder & Chief Product Officer (CPDO)",
-        "bio": "Co-Founder & Chief Product Officer. Visionário em experiências digitais, especialista em transformar estratégias complexas de marca em produtos digitais premium de alta conversão. Liderando UI/UX design, design systems e estratégia de produto, Rafael garante que cada ponto de contato digital ofereça beleza cinematográfica e engajamento perfeito para o usuário."
-      },
-      "claudioBracci": {
-        "name": "Flavio Henrique",
-        "role": "Co-Founder & Chief Technology Officer (CTO)",
-        "bio": "Co-Founder & Chief Technology Officer. Arquiteto de software veterano e engenheiro de sistemas dedicado a construir infraestruturas digitais de alta performance, seguras e escaláveis. Especialista em WebGL, plataformas personalizadas, soluções em Nuvem e integrações de IA, Flavio lidera o squad de engenharia da Commet para transformar ideias complexas em realidade ultrarrápida."
-      },
-      "andreaCaturelli": {
-        "name": "Especialista Sob Demanda",
-        "role": "Especialista em Desenvolvimento Web & SEO Técnico",
-        "bio": "Desenvolvedor frontend e mago do SEO técnico. Unindo a excelência estética ao destaque nos motores de busca, garantindo marcações semânticas, arquiteturas limpas e configurações de SEO impecáveis que ranqueiam e convertem."
-      },
-      "fulvioMaccarone": {
-        "name": "Especialista Sob Demanda",
-        "role": "Especialista em Growth & Performance Marketing",
-        "bio": "Profissional de marketing de performance e estrategista de crescimento. Desenvolvendo campanhas de funil B2B, setups de mídia programática e rastreamento de atribuição para escalar a aquisição de clientes, garantindo que cada byte de tecnologia se traduza diretamente em tração de negócios."
-      }
-    }
-  },
+  homeCardsScroll: {"title":"Estratégia e execução, de perto.","label":"Rafael França · Founder","intro":"Fundei a Commet para conectar estratégia de marca, tecnologia e crescimento.","description":"Trabalho diretamente com cada cliente para definir prioridades e conectar design, desenvolvimento, automação e performance conforme o projeto precisa. Da primeira conversa à entrega, você sabe quem está à frente do trabalho.","cta":"Vamos conversar sobre seu projeto"},
   homeNews: {
     "title": "Novidades & Insights"
   },
@@ -16003,8 +15979,8 @@ const pt = {
     "lastNamePlaceholder": "Sobrenome",
     "messagePlaceholder": "Mensagem",
     "submitButton": "Enviar Mensagem",
-    "confirmationTitle": "Abrindo o WhatsApp...",
-    "confirmationMessage": "Estamos redirecionando você para o nosso WhatsApp Business...",
+    "confirmationTitle": "Conclua o envio no WhatsApp",
+    "confirmationMessage": "Sua mensagem foi preparada. Toque em enviar no WhatsApp para concluir o contato.",
     "closeButton": "Fechar"
   },
   infracore: {
@@ -27353,6 +27329,8 @@ const _sfc_main$5 = {
     if (document) {
       this.initHowler();
       this.loadershown = performance.now();
+      // Never leave content blocked if the child emits loaded before this listener.
+      setTimeout(() => { this.loader = false; }, 2500);
       this.$lenisEmitter.on("loaded", () => {
         if (this.loadershown + 2e3 > performance.now()) {
           setTimeout(() => {
@@ -27713,6 +27691,8 @@ const _sfc_main$1 = {
     if (document) {
       this.initHowler();
       this.loadershown = performance.now();
+      // Never leave content blocked if the child emits loaded before this listener.
+      setTimeout(() => { this.loader = false; }, 2500);
       this.$lenisEmitter.on("loaded", () => {
         if (this.loadershown + 2e3 > performance.now()) {
           setTimeout(() => {
