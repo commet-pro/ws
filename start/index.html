@@ -662,7 +662,7 @@
       text-decoration: underline;
     }
   </style>
-</head>
+<script src="/contact-channel.js?v=20261023"></script></head>
 <body>
   <div class="bg-grid"></div>
 
@@ -1121,29 +1121,6 @@
       formData.company = document.getElementById('company').value;
       formData.scope = document.getElementById('scope-message').value;
 
-      // Animate interface to showing loading redirect
-      document.getElementById('onboarding-form').style.display = 'none';
-      document.getElementById('progress-container').style.display = 'none';
-      document.getElementById('confirmation-box').style.display = 'flex';
-
-      // Assemble final briefing details to push via API contact
-      try {
-        await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            message: `[Start Onboarding]\nCompany: ${formData.company}\nHorizons: ${formData.horizons.join(', ') || 'None selected'}\nBudget: ${formData.budget}\nTimeline: ${formData.timeline}\nScope: ${formData.scope}`
-          })
-        });
-      } catch (err) {
-        console.error("API contact error (swallowed for fallback redirect):", err);
-      }
-
       // Format beautiful pre-filled message text for WhatsApp Business API
       let text = '';
       if (selectedLanguage === 'pt') {
@@ -1170,24 +1147,7 @@ Scope Overview:
 ${formData.scope}`;
       }
 
-      const encodedText = encodeURIComponent(text);
-      
-      setTimeout(() => {
-        window.open("https://wa.me/5511999999999?text=" + encodedText, "_blank");
-        
-        // Reset states
-        setTimeout(() => {
-          document.getElementById('onboarding-form').style.display = 'block';
-          document.getElementById('progress-container').style.display = 'block';
-          document.getElementById('confirmation-box').style.display = 'none';
-          
-          // Clear inputs
-          document.getElementById('onboarding-form').reset();
-          formData.horizons = [];
-          document.querySelectorAll('.horizon-select-card').forEach(card => card.classList.remove('selected'));
-          goToStep(1);
-        }, 1000);
-      }, 1500);
+      window.CommetContact.open(text);
     }
   </script>
 </body>

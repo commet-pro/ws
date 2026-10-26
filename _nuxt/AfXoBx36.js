@@ -9150,47 +9150,16 @@ function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
   ]);
 }
 const __nuxt_component_10 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5], ["__scopeId", "data-v-b243e1ae"]]);
-const _imports_0 = publicAssetsURL("/partners/RafaelFranca.png");
-const _imports_1 = publicAssetsURL("/partners/FlavioHenrique.png");
-const _imports_2 = publicAssetsURL("/partners/Specialist_SiteSEO.png");
-const _imports_3 = publicAssetsURL("/partners/Specialist_SpeedPerformance.png");
-const _imports_4 = publicAssetsURL("/partners/Specialist_Marketing.png");
-const _imports_5 = publicAssetsURL("/partners/guidocoppola.png");
-const _imports_6 = publicAssetsURL("/partners/AndreaBogni.png?v=2");
-const _imports_7 = publicAssetsURL("/partners/LeonardoZucol.png");
-const _imports_8 = publicAssetsURL("/partners/carminebassetti.png");
-publicAssetsURL("/partners/massimilianoladovaz.png");
-const _imports_10 = publicAssetsURL("/partners/AlessandroBer.png");
-const _imports_11 = publicAssetsURL("/partners/GiovannaEsposito_pp.png");
-publicAssetsURL("/partners/GucluBatkin.png");
-const _imports_13 = publicAssetsURL("/partners/Giuseppe_Scarlata.png");
 const _sfc_main$4 = {
   mounted() {
     this.$el.snapFN = () => {
-      const section = this.$el.querySelector(".ic-fh-section") || this.$el;
-      section.style.height = "auto";
-      section.style.minHeight = "0px";
-      this.$el.style.height = "auto";
-      
-      // Forçamos o navegador a recalcular o layout antes de medir
-      const height = section.offsetHeight;
-      const t = height > window.innerHeight + 50; 
-      
-      this.$el.isTall = t;
-      this.$el.snap = window.innerWidth > 800 && !t;
-      
-      if (this.$el.snap && !t) {
-        section.style.height = "100dvh";
-        section.style.minHeight = "100dvh";
-        section.style.overflow = "hidden";
-        this.$el.style.height = "100dvh";
-      } else {
-        section.style.height = "auto";
-        section.style.minHeight = "130dvh"; // Aumentado para garantir área de scroll
-        section.style.paddingBottom = "200px"; // Mais espaço no final
-        section.style.overflow = "visible";
-        this.$el.style.height = "auto";
-      }
+      const section = this.$el.querySelector('.ic-fh-section');
+      section.style.height = 'auto';
+      section.style.minHeight = '0';
+      section.style.overflow = 'visible';
+      this.$el.style.height = 'auto';
+      this.$el.isTall = true;
+      this.$el.snap = false;
     };
     this.$el.snapFN();
     this.$el.snapOffset = -150;
@@ -9337,83 +9306,15 @@ const _hoisted_72 = {
 };
 const _hoisted_73 = { class: "ic-typ-p" };
 const _hoisted_74 = ["innerHTML"];
-function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Motion = Motion;
-  return openBlock(), createElementBlock("div", _hoisted_1$2, [
-    createBaseVNode("div", _hoisted_2$2, [
-      createVNode(_component_Motion, {
-        class: "ic-motion",
-        initial: { opacity: 0, y: 10, scale: 0.9 },
-        whileInView: { opacity: 1, y: 0, scale: 1 },
-        transition: { duration: 0.5, ease: "easeInOut" }
-      }, {
-        default: withCtx(() => [
-          createBaseVNode("h1", _hoisted_3$2, toDisplayString(_ctx.$t("homeCardsScroll.title")), 1)
-        ]),
-        _: 1
-      }),
-      createBaseVNode("div", _hoisted_4$2, [
-        createBaseVNode("div", _hoisted_5$2, [
-          createBaseVNode("div", _hoisted_6$2, [
-            _cache[0] || (_cache[0] = createBaseVNode("img", {
-              loading: "lazy",
-              src: _imports_0,
-              alt: _ctx.$t("homeCardsScroll.team.filippoGhirelli.name")
-            }, null, -1)),
-            createBaseVNode("h3", _hoisted_7$2, toDisplayString(_ctx.$t("homeCardsScroll.team.filippoGhirelli.name")), 1),
-            createBaseVNode("h3", _hoisted_8$2, toDisplayString(_ctx.$t("homeCardsScroll.team.filippoGhirelli.role")), 1),
-            createBaseVNode("p", {
-              class: "ic-typ-p--small",
-              innerHTML: _ctx.$t("homeCardsScroll.team.filippoGhirelli.bio")
-            }, null, 8, _hoisted_9$2)
-          ])
-        ], 512),
-        createBaseVNode("div", _hoisted_10$2, [
-          createBaseVNode("div", _hoisted_11$1, [
-            _cache[1] || (_cache[1] = createBaseVNode("img", {
-              loading: "lazy",
-              src: _imports_1,
-              alt: _ctx.$t("homeCardsScroll.team.claudioBracci.name")
-            }, null, -1)),
-            createBaseVNode("h3", _hoisted_12$1, toDisplayString(_ctx.$t("homeCardsScroll.team.claudioBracci.name")), 1),
-            createBaseVNode("h3", _hoisted_13$1, toDisplayString(_ctx.$t("homeCardsScroll.team.claudioBracci.role")), 1),
-            createBaseVNode("p", {
-              class: "ic-typ-p--small",
-              innerHTML: _ctx.$t("homeCardsScroll.team.claudioBracci.bio")
-            }, null, 8, _hoisted_14$1)
-          ])
-        ], 512),
-        createBaseVNode("div", _hoisted_15$1, [
-          createBaseVNode("div", _hoisted_16$1, [
-            _cache[2] || (_cache[2] = createBaseVNode("img", {
-              loading: "lazy",
-              src: _imports_2,
-              alt: _ctx.$t("homeCardsScroll.team.andreaCaturelli.name")
-            }, null, -1)),
-            createBaseVNode("h3", _hoisted_17$1, toDisplayString(_ctx.$t("homeCardsScroll.team.andreaCaturelli.name")), 1),
-            createBaseVNode("h3", _hoisted_18, toDisplayString(_ctx.$t("homeCardsScroll.team.andreaCaturelli.role")), 1),
-            createBaseVNode("p", {
-              class: "ic-typ-p--small",
-              innerHTML: _ctx.$t("homeCardsScroll.team.andreaCaturelli.bio")
-            }, null, 8, _hoisted_19)
-          ])
-        ], 512),
-
-        createBaseVNode("div", _hoisted_25, [
-          createBaseVNode("div", _hoisted_26, [
-            _cache[4] || (_cache[4] = createBaseVNode("img", {
-              loading: "lazy",
-              src: _imports_4,
-              alt: _ctx.$t("homeCardsScroll.team.fulvioMaccarone.name")
-            }, null, -1)),
-            createBaseVNode("h3", _hoisted_27, toDisplayString(_ctx.$t("homeCardsScroll.team.fulvioMaccarone.name")), 1),
-            createBaseVNode("h3", _hoisted_28, toDisplayString(_ctx.$t("homeCardsScroll.team.fulvioMaccarone.role")), 1),
-            createBaseVNode("p", {
-              class: "ic-typ-p--small",
-              innerHTML: _ctx.$t("homeCardsScroll.team.fulvioMaccarone.bio")
-            }, null, 8, _hoisted_29)
-          ])
-        ], 512)
+function _sfc_render$4(_ctx) {
+  return openBlock(), createElementBlock('section', {id:'people', 'aria-labelledby':'studio-heading'}, [
+    createBaseVNode('div', {class:'ic-fh-section'}, [
+      createBaseVNode('div', {class:'commet-studio'}, [
+        createBaseVNode('p', {class:'commet-studio-label'}, toDisplayString(_ctx.$t('homeCardsScroll.label')), 1),
+        createBaseVNode('h2', {id:'studio-heading', class:'ic-typ-h1'}, toDisplayString(_ctx.$t('homeCardsScroll.title')), 1),
+        createBaseVNode('p', {class:'commet-studio-intro'}, toDisplayString(_ctx.$t('homeCardsScroll.intro')), 1),
+        createBaseVNode('p', {class:'ic-typ-p commet-studio-description'}, toDisplayString(_ctx.$t('homeCardsScroll.description')), 1),
+        createBaseVNode('a', {class:'ic-btn', href:'/start/'}, toDisplayString(_ctx.$t('homeCardsScroll.cta')), 1)
       ])
     ])
   ]);
@@ -9444,51 +9345,14 @@ const _sfc_main$3 = {
     };
   },
   methods: {
-    async sendForm() {
-      this.sending = true;
-      try {
-        let token = await this.recaptcha();
-        await fetch("/api/contact", {
-          method: "POST",
-          body: JSON.stringify({
-            firstName: this.firstName,
-            lastName: this.lastName,
-            message: this.message,
-            email: this.email,
-            recaptchaToken: token
-          })
-        });
-      } catch (err) {
-        console.error("Fetch API error:", err);
-      }
-      const messageText = encodeURIComponent(
-        "Olá Commet! Meu nome é " + this.firstName + " " + this.lastName + " (" + this.email + "). Gostaria de iniciar um projeto:\n\n" + this.message
-      );
-      window.open("https://wa.me/5511999999999?text=" + messageText, "_blank");
-      this.sending = false;
-      this.formsubmitted = true;
-      setTimeout(() => {
-        this.$emit("close");
-        this.formsubmitted = false;
-        this.firstName = "";
-        this.lastName = "";
-        this.message = "";
-        this.email = "";
-      }, 2000);
-    }
-  },
-  watch: {
-    message(v) {
-      if (v) {
-        let __v = v.split("\n");
-        if (__v.length > 2) {
-          let _v = __v.slice(0, 2).join("\n");
-          this.message = _v;
-        }
-      }
+    sendForm() {
+      if (this.sending) return;
+      const message = 'Olá Commet! Meu nome é ' + this.firstName + ' ' + this.lastName + ' (' + this.email + '). Gostaria de iniciar um projeto:\n\n' + this.message;
+      if (window.CommetContact.open(message)) this.formsubmitted = true;
     }
   }
 };
+
 const _hoisted_1$1 = { class: "form-container" };
 const _hoisted_2$1 = { class: "ic-typ-h2" };
 const _hoisted_3$1 = { class: "ic-typ-p" };
